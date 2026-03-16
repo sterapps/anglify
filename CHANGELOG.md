@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.47.0](https://github.com/valentingavran/anglify/compare/v0.46.3...v0.47.0) (2026-03-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Angular 15 is now required as a peer dependency
+* `ngcc` has been removed from the postinstall script (View Engine libraries are no longer supported)
+* `angular.json` has been replaced with individual `project.json` files per project
+
+### 🚀  Features
+
+* **Angular 15:** upgrade all Angular packages from v14 to v15 ([#SIPWU-1277](https://github.com/valentingavran/anglify/issues/SIPWU-1277))
+* **Angular 15:** upgrade Nx packages from v14 to v15
+* **Angular 15:** upgrade ng-packagr from v14 to v15
+* **Angular 15:** upgrade jest-preset-angular from v12 to v13
+* **Angular 15:** upgrade zone.js from v0.11 to v0.12
+
+### 🔬  Code Refactoring
+
+* **Settings Factory:** migrate `InjectFlags.Optional` to `{ optional: true }` (`InjectFlags` is deprecated in v15)
+* **Internal Icons Token:** migrate `InjectFlags.Optional` to `{ optional: true }`
+
+### 🏗  Build System
+
+* remove `ngcc` from postinstall script (no longer needed in Angular 15)
+* migrate `angular.json` to individual `project.json` files via `nx g @nrwl/workspace:fix-configuration`
+* fix `nx.json` packageManager from `npm` to `yarn`
+
 ### [0.46.3](https://github.com/valentingavran/anglify/compare/v0.46.2...v0.46.3) (2023-03-02)
 
 

@@ -1,4 +1,6 @@
 {
+  "name": "anglify",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/anglify/src",
   "prefix": "anglify",

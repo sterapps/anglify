@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "projects": {
-    "anglify": "libs/anglify",
-    "docs": "apps/docs",
-    "kitchensink": "apps/kitchensink",
-    "primitives": "libs/primitives"
-  }
-}
