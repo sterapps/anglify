@@ -7,8 +7,8 @@
   anglifyInteractionState
   [active]="false"
 >
-  <ng-container *anglifySlotOutlet="slots | findSlot: 'header'">{{ label }}</ng-container>
-  <ng-container *anglifySlotOutlet="slots | findSlot: 'append'">
+  <ng-container *anglifySlotOutlet="slots | findSlot : 'header'">{{ label }}</ng-container>
+  <ng-container *anglifySlotOutlet="slots | findSlot : 'append'">
     <anglify-icon *ngIf="!hideToggle" [icon]="internalIcons.chevronDown" [@rotate]="active$ | async"></anglify-icon>
   </ng-container>
 </div>

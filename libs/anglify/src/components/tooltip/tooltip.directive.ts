@@ -1,4 +1,3 @@
-import type { TemplateRef } from '@angular/core';
 import {
   ApplicationRef,
   ChangeDetectorRef,
@@ -14,6 +13,7 @@ import {
   type ComponentRef,
   type EmbeddedViewRef,
   type OnDestroy,
+  type TemplateRef,
 } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { merge, of, Subject } from 'rxjs';

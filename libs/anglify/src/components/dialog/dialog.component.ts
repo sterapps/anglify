@@ -1,6 +1,14 @@
 import { DOCUMENT } from '@angular/common';
-import type { AfterViewInit } from '@angular/core';
-import { HostBinding, ChangeDetectionStrategy, Component, ElementRef, Inject, ViewChild, type OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  HostBinding,
+  Inject,
+  ViewChild,
+  type AfterViewInit,
+  type OnInit,
+} from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { filter, fromEvent } from 'rxjs';
 import { TrapFocusDirective } from '../../directives/trap-focus/trap-focus.directive';

@@ -16,7 +16,7 @@ import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import type { EmbeddedViewRef } from '@angular/core';
 import { ChangeDetectionStrategy, Component, ElementRef, Renderer2, ViewChild, ViewContainerRef } from '@angular/core';
-import { NavigationStart, Router, RouterModule, type RouterEvent } from '@angular/router';
+import { NavigationStart, Router, RouterModule } from '@angular/router';
 import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-typescript';
@@ -114,7 +114,7 @@ export class DefaultComponent {
 
   protected markdown$ = this.router.events.pipe(
     filter(event => event instanceof NavigationStart),
-    map(event => (event as RouterEvent).url),
+    map(event => (event as NavigationStart).url),
     startWith(this.router.url),
     switchMap(source =>
       this.httpClient

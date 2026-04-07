@@ -1,14 +1,14 @@
 <div class="toolbar-container">
-  <div class="start" *ngIf="!collapse && (slots | findSlot: 'start')">
-    <ng-template *anglifySlotOutlet="slots | findSlot: 'start'"></ng-template>
+  <div class="start" *ngIf="!collapse && (slots | findSlot : 'start')">
+    <ng-template *anglifySlotOutlet="slots | findSlot : 'start'"></ng-template>
   </div>
   <div class="center" *ngIf="!collapse">
     <ng-content></ng-content>
   </div>
-  <div class="end" *ngIf="slots | findSlot: 'end'">
-    <ng-container *anglifySlotOutlet="slots | findSlot: 'end'"></ng-container>
+  <div class="end" *ngIf="slots | findSlot : 'end'">
+    <ng-container *anglifySlotOutlet="slots | findSlot : 'end'"></ng-container>
   </div>
 </div>
-<div class="extension-container" *ngIf="slots | findSlot: 'extension'">
-  <ng-container *anglifySlotOutlet="slots | findSlot: 'extension'"></ng-container>
+<div class="extension-container" *ngIf="slots | findSlot : 'extension'">
+  <ng-container *anglifySlotOutlet="slots | findSlot : 'extension'"></ng-container>
 </div>

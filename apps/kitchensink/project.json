@@ -71,14 +71,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/kitchensink/**/*.ts", "apps/kitchensink/**/*.html"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/kitchensink"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/kitchensink"],
       "options": {
         "jestConfig": "apps/kitchensink/jest.config.ts",
         "passWithNoTests": true

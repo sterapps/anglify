@@ -12,6 +12,6 @@
     {{ item.text }}
   </a>
   <div *ngIf="index !== length - 1" class="divider">
-    <ng-container *anglifySlotOutlet="slots | findSlot: 'divider'">{{ divider }}</ng-container>
+    <ng-container *anglifySlotOutlet="slots | findSlot : 'divider'">{{ divider }}</ng-container>
   </div>
 </ng-container>

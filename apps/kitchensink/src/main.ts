@@ -7,8 +7,4 @@ if (environment.production) {
   enableProdMode();
 }
 
-try {
-  await bootstrapApplication(AppComponent);
-} catch (error) {
-  console.log(error);
-}
+bootstrapApplication(AppComponent).catch(error => console.log(error));

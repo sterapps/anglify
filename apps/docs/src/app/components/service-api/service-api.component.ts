@@ -34,7 +34,7 @@ export class ServiceAPIComponent {
 
   public publicMethods$ = this.documentation$.pipe(
     map(documentation => {
-      if (!documentation || !documentation.methods) return;
+      if (!documentation?.methods) return;
       const methods = documentation.methods.filter(method => method.modifierKind.includes(ModifierType.Public));
       if (methods.length === 0) return undefined;
       return methods;

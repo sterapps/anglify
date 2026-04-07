@@ -25,7 +25,7 @@ export class DirectiveAPIComponent {
 
   public publicMethods$ = this.documentation$.pipe(
     map(documentation => {
-      if (!documentation || !documentation.methodsClass) return;
+      if (!documentation?.methodsClass) return;
       const methods = documentation.methodsClass.filter(method => method.modifierKind.includes(ModifierType.Public));
       if (methods.length === 0) return undefined;
       return methods;

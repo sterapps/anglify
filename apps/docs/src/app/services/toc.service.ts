@@ -103,7 +103,7 @@ export class TocService {
     if (id) {
       addToMap(id);
     } else {
-      id = (heading.textContent ?? '').trim().toLowerCase().replace(/\W+/g, '-');
+      id = (heading.textContent ?? '').trim().toLowerCase().replaceAll(/\W+/g, '-');
       id = addToMap(id);
       heading.id = id;
     }

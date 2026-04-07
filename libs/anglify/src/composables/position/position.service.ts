@@ -1,5 +1,5 @@
 import { ElementRef, Inject, Injectable } from '@angular/core';
-import type { Options } from '@floating-ui/core/src/middleware/offset';
+import type { OffsetOptions } from '@floating-ui/core';
 import { computePosition, flip, offset, shift, size, type Padding } from '@floating-ui/dom';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { fromEvent, merge } from 'rxjs';
@@ -16,7 +16,7 @@ export class PositionService {
 
   private _padding: Padding = 5;
 
-  private _offset: Options = 10;
+  private _offset: OffsetOptions = 10;
 
   private _parentWidth = false;
 
@@ -55,7 +55,7 @@ export class PositionService {
     return this._offset;
   }
 
-  public set offset(value: Options) {
+  public set offset(value: OffsetOptions) {
     this._offset = value;
     void this.updatePosition();
   }

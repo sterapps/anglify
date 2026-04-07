@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, EMPTY, Subject } from 'rxjs';
 import { delay, map, switchMap, take, tap } from 'rxjs/operators';
 import type { StepDirective } from './step.directive';
 
 @UntilDestroy()
-@Injectable({ providedIn: 'root' })
+// eslint-disable-next-line @angular-eslint/use-injectable-provided-in
+@Injectable()
 export abstract class StepperService {
   private readonly _steps$ = new BehaviorSubject<StepDirective[]>([]);
 
@@ -62,6 +63,7 @@ export abstract class StepperService {
         switchMap(currentSteps => {
           const currentlySelectedIndex = this._selectedIndex$.value;
           const activeStep = currentSteps[currentlySelectedIndex];
+          if (!activeStep) return EMPTY;
           return activeStep.valid$.pipe(
             take(1),
             tap(valid => {
@@ -125,7 +127,7 @@ export abstract class StepperService {
             this._selectedIndex$.next(0);
             // eslint-disable-next-line sonarjs/no-duplicated-branches
           } else if (currentSteps.length === 0) {
-            // On init, set the first step as acti ve
+            // On init, set the first step as active
             this._selectedIndex$.next(0);
           }
 

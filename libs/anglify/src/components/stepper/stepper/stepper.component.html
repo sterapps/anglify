@@ -9,7 +9,7 @@
       [visited]="(step.visited$ | async) ?? false"
     >
       <ng-template slot="visitedIcon">
-        <ng-container *anglifySlotOutlet="slots | findSlot: 'visitedIcon'">
+        <ng-container *anglifySlotOutlet="slots | findSlot : 'visitedIcon'">
           <anglify-icon [icon]="internalIcons.edit"></anglify-icon>
         </ng-container>
       </ng-template>
@@ -45,6 +45,6 @@
     <div *ngIf="(step.isLastStep$ | async) === false" class="line"></div>
   </div>
   <div class="content">
-    <ng-container [ngTemplateOutlet]="step.template"></ng-container>
+    <ng-container [ngTemplateOutlet]="step.template" [ngTemplateOutletInjector]="stepInjector"></ng-container>
   </div>
 </ng-template>

@@ -23,7 +23,17 @@
       "extends": ["neon/angular"],
       "rules": {
         "@angular-eslint/template/use-track-by-function": "off",
-        "@angular-eslint/template/no-call-expression": "off"
+        "@angular-eslint/template/no-call-expression": "off",
+        "@angular-eslint/template/accessibility-alt-text": "off",
+        "@angular-eslint/template/accessibility-elements-content": "off",
+        "@angular-eslint/template/accessibility-label-has-associated-control": "off",
+        "@angular-eslint/template/accessibility-table-scope": "off",
+        "@angular-eslint/template/accessibility-valid-aria": "off",
+        "@angular-eslint/template/alt-text": "error",
+        "@angular-eslint/template/elements-content": "error",
+        "@angular-eslint/template/label-has-associated-control": "warn",
+        "@angular-eslint/template/table-scope": "error",
+        "@angular-eslint/template/valid-aria": "error"
       }
     }
   ]

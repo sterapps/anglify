@@ -162,7 +162,7 @@ export class OtpInputComponent implements EntireOTPInputSettings, ControlValueAc
   protected onFocusHandler(event?: Event, index?: number) {
     event?.preventDefault();
     event?.stopPropagation();
-    const ref = this.inputs && this.inputs[index ?? 0];
+    const ref = this.inputs?.[index ?? 0];
     if (!ref) return;
     if (document.activeElement !== ref) {
       ref.focus();

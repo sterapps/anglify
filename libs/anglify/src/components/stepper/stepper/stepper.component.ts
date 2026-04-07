@@ -5,6 +5,7 @@ import {
   ContentChildren,
   ElementRef,
   Inject,
+  Injector,
   Input,
   Output,
   QueryList,
@@ -101,13 +102,25 @@ export class StepperComponent extends StepperService implements EntireStepperSet
 
   private readonly nativeElement = this.elementRef.nativeElement;
 
+  /**
+   * Injector used for step template outlets. Explicitly provides StepperService as this
+   * component instance, working around Angular 16's changed DI resolution for content
+   * children of standalone components.
+   */
+  public readonly stepInjector: Injector;
+
   public constructor(
     @Self() @Inject('anglifyStepperSettings') private readonly settings: EntireStepperSettings,
     public readonly stepperSettings: StepperSettingsService,
     private readonly elementRef: ElementRef<HTMLElement>,
-    @Inject(INTERNAL_ICONS) protected readonly internalIcons: InternalIconSetDefinition
+    @Inject(INTERNAL_ICONS) protected readonly internalIcons: InternalIconSetDefinition,
+    public readonly injector: Injector
   ) {
     super();
+    this.stepInjector = Injector.create({
+      providers: [{ provide: StepperService, useValue: this }],
+      parent: this.injector,
+    });
     this.stepperSettings.setHasStepConnectionLine(this.settings.stepConnectionLine);
     this.stepperSettings.setHeaderNavigationEnabled(this.settings.headerNavigation);
     this.stepperSettings.setOrientation(this.settings.orientation);
@@ -119,7 +132,10 @@ export class StepperComponent extends StepperService implements EntireStepperSet
       startWith(this._steps),
       untilDestroyed(this),
       map((steps: QueryList<StepDirective>) => steps.toArray()),
-      tap(steps => this.updateSteps(steps))
+      tap(steps => {
+        for (const step of steps) step.connectStepper(this);
+        this.updateSteps(steps);
+      })
     ).subscribe();
   }
 }

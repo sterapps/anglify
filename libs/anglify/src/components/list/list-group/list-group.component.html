@@ -1,12 +1,12 @@
 <anglify-list-item (click)="toggle()" tabindex="0" (keydown.enter)="toggle()" (keydown.space)="$event.preventDefault(); toggle()">
-  <ng-container *ngIf="slots | findSlot: 'activator:prepend'">
+  <ng-container *ngIf="slots | findSlot : 'activator:prepend'">
     <ng-template slot="prepend">
-      <ng-container *anglifySlotOutlet="slots | findSlot: 'activator:prepend'"></ng-container>
+      <ng-container *anglifySlotOutlet="slots | findSlot : 'activator:prepend'"></ng-container>
     </ng-template>
   </ng-container>
-  <ng-container *anglifySlotOutlet="slots | findSlot: 'activator'"></ng-container>
+  <ng-container *anglifySlotOutlet="slots | findSlot : 'activator'"></ng-container>
   <ng-template slot="append">
-    <ng-container *anglifySlotOutlet="slots | findSlot: 'activator:append'">
+    <ng-container *anglifySlotOutlet="slots | findSlot : 'activator:append'">
       <anglify-icon [icon]="internalIcons.chevronDown" [@rotate]="active$ | async"></anglify-icon>
     </ng-container>
   </ng-template>

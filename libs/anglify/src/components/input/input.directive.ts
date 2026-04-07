@@ -77,7 +77,7 @@ export class InputDirective implements OnInit {
   );
 
   public readonly floating$ = this.length$.pipe(
-    startWith(false),
+    startWith(0),
     map(length => length > 0),
     distinctUntilChanged(),
     share()
