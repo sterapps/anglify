@@ -1,5 +1,4 @@
-import type { SortSetting } from '@anglify/components';
-import { DataTableComponent, type DataTableHeader } from '@anglify/components';
+import { DataTableComponent, type SortSetting, type DataTableHeader } from '@anglify/components';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 

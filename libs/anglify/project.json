@@ -6,8 +6,8 @@
   "prefix": "anglify",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:package",
-      "outputs": ["dist/libs/anglify"],
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/libs/anglify"],
       "options": {
         "project": "libs/anglify/ng-package.json"
       },
@@ -22,15 +22,15 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/anglify"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/anglify"],
       "options": {
         "jestConfig": "libs/anglify/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["libs/anglify/src/**/*.ts", "libs/anglify/src/**/*.html"]
       }

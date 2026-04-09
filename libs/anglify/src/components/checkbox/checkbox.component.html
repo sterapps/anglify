@@ -1,4 +1,4 @@
-<!-- eslint-disable-next-line @angular-eslint/template/accessibility-label-has-associated-control -->
+<!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
 <label [class.before]="labelPosition === 'before'">
   <div #overlayContainer class="container">
     <div
@@ -11,10 +11,10 @@
       [tabindex]="tabindex$ | async"
     ></div>
     <span #reflectOffIcon [style.display]="(checked$ | async) ? 'none' : 'block'" class="checkbox-custom-icons">
-      <ng-container *anglifySlotOutlet="slots | findSlot: 'offIcon'"></ng-container>
+      <ng-container *anglifySlotOutlet="slots | findSlot : 'offIcon'"></ng-container>
     </span>
     <span #reflectOnIcon [style.display]="(checked$ | async) ? 'block' : 'none'" class="checkbox-custom-icons">
-      <ng-container *anglifySlotOutlet="slots | findSlot: 'onIcon'"></ng-container>
+      <ng-container *anglifySlotOutlet="slots | findSlot : 'onIcon'"></ng-container>
     </span>
     <span #onIcon [style.display]="(checked$ | async) ? 'block' : 'none'" class="checkbox-custom-icons"></span>
     <span #offIcon [style.display]="(checked$ | async) ? 'none' : 'block'" class="checkbox-custom-icons"></span>

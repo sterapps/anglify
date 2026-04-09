@@ -1,5 +1,4 @@
 import { CommonModule } from '@angular/common';
-import type { OnChanges, SimpleChanges } from '@angular/core';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -13,6 +12,8 @@ import {
   Self,
   ViewChild,
   type AfterViewInit,
+  type OnChanges,
+  type SimpleChanges,
 } from '@angular/core';
 import type { ControlValueAccessor } from '@angular/forms';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';

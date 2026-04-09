@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.48.0](https://github.com/valentingavran/anglify/compare/v0.47.0...v0.48.0) (2026-04-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* Angular 16 is now required as a peer dependency
+
+### 🚀  Features
+
+* **Angular 16:** upgrade all Angular packages from v15 to v16
+* **Angular 16:** upgrade Nx packages from v15 to v16
+* **Angular 16:** upgrade ng-packagr from v15 to v16
+* **Angular 16:** upgrade zone.js from v0.12 to v0.13
+
+### 🔬  Code Refactoring
+
+* **Stepper:** create explicit `stepInjector` to work around Angular 16's changed DI resolution for content children of standalone components
+* **Stepper:** explicitly connect steps to stepper via `step.connectStepper(this)` on step query changes
+* **Position Service:** migrate `Options` import to `OffsetOptions` from `@floating-ui/core`
+
+
 ## [0.47.0](https://github.com/valentingavran/anglify/compare/v0.46.3...v0.47.0) (2026-03-16)
 
 

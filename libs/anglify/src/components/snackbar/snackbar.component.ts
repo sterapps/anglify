@@ -1,6 +1,14 @@
 import { NgIf } from '@angular/common';
-import type { AfterViewInit } from '@angular/core';
-import { ChangeDetectionStrategy, Component, Inject, Self, type OnDestroy, type OnInit, ElementRef } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  Inject,
+  Self,
+  type AfterViewInit,
+  type OnDestroy,
+  type OnInit,
+} from '@angular/core';
 import { createSettingsProvider } from '../../factories/settings.factory';
 import { ButtonComponent } from '../button/button.component';
 import { DEFAULT_SNACKBAR_SETTINGS, SNACKBAR_SETTINGS } from './snackbar-settings.token';

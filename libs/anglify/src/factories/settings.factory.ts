@@ -2,7 +2,6 @@ import { inject, type InjectionToken, type Provider } from '@angular/core';
 import { deepmerge } from 'deepmerge-ts';
 
 /**
- *
  * @param name - Name of the new settings provider, which is only used internally and is created with this method.
  * @param defaultValues - The default values for the component, which will be merged with the values of the settingsToken parameter
  * @param settingsToken - The settings overwritten and provided by the user. The missing values in the token are compensated by the defaultValues

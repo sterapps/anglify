@@ -1,7 +1,7 @@
 import { Directive, Input, Output, TemplateRef } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { BehaviorSubject, combineLatest } from 'rxjs';
-import { map, shareReplay, tap } from 'rxjs/operators';
+import { BehaviorSubject, combineLatest, of } from 'rxjs';
+import { map, shareReplay, switchMap, tap } from 'rxjs/operators';
 import { StepperService } from './stepper.service';
 
 @UntilDestroy()
@@ -38,12 +38,19 @@ export class StepDirective {
 
   public readonly index$ = this._index$.asObservable();
 
-  public readonly selected$ = combineLatest([this.stepper.selectedIndex$, this._index$]).pipe(
-    map(([selectedIndex, currentStepIndex]) => selectedIndex === currentStepIndex),
-    tap(isSelected => {
-      if (isSelected && !this.getVisitedSnapshot()) {
-        this.setVisited(true);
-      }
+  private readonly _stepper$ = new BehaviorSubject<StepperService | null>(null);
+
+  public readonly selected$ = this._stepper$.pipe(
+    switchMap(stepper => {
+      if (!stepper) return of(false);
+      return combineLatest([stepper.selectedIndex$, this._index$]).pipe(
+        map(([selectedIndex, currentStepIndex]) => selectedIndex === currentStepIndex),
+        tap(isSelected => {
+          if (isSelected && !this.getVisitedSnapshot()) {
+            this.setVisited(true);
+          }
+        })
+      );
     }),
     // eslint-disable-next-line rxjs/no-sharereplay
     shareReplay(1)
@@ -72,8 +79,16 @@ export class StepDirective {
   // eslint-disable-next-line @angular-eslint/no-output-on-prefix
   @Output() public readonly onVisitedChange$ = this.visited$;
 
-  public constructor(protected readonly stepper: StepperService, public template: TemplateRef<any>) {
+  public constructor(public template: TemplateRef<any>) {
     this.selected$.pipe(untilDestroyed(this)).subscribe();
+  }
+
+  /**
+   * Called by StepperComponent after content init to wire up the correct service instance.
+   * This avoids DI issues with content children in Angular 16 standalone components.
+   */
+  public connectStepper(stepper: StepperService): void {
+    this._stepper$.next(stepper);
   }
 
   public setLabel(label: string) {

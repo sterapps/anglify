@@ -1,6 +1,6 @@
 <table>
   <thead *ngIf="!hideDefaultHeader && !mobile">
-    <ng-container *anglifySlotOutlet="slots | findSlot: 'header'">
+    <ng-container *anglifySlotOutlet="slots | findSlot : 'header'">
       <th *ngIf="selectionService.selectableRows$ | async">
         <anglify-checkbox
           *ngIf="selectionService.headerCheckboxEnabled$ | async"
@@ -15,7 +15,7 @@
           class="sortable"
           [ngClass]="header.align ? 'align-' + header.align : 'align-start'"
         >
-          <ng-container *anglifySlotOutlet="slots | findSlot: 'header:' + header.value; context: { $implicit: header }">
+          <ng-container *anglifySlotOutlet="slots | findSlot : 'header:' + header.value; context: { $implicit: header }">
             <span>{{ header.text }}</span>
           </ng-container>
           <ng-container *ngIf="header.sortable !== false">
@@ -32,7 +32,7 @@
         </th>
         <ng-template #notSortableHeader>
           <th [ngClass]="header.align ? 'align-' + header.align : 'align-start'">
-            <ng-container *anglifySlotOutlet="slots | findSlot: 'header:' + header.value; context: { $implicit: header }">
+            <ng-container *anglifySlotOutlet="slots | findSlot : 'header:' + header.value; context: { $implicit: header }">
               <span>{{ header.text }}</span>
             </ng-container>
           </th>
@@ -52,10 +52,10 @@
   <tbody>
     <anglify-progress-linear *ngIf="loading$ | async" [indeterminate]="true"></anglify-progress-linear>
     <div class="loading-state" *ngIf="loadingTextVisible$ | async">
-      <ng-container *anglifySlotOutlet="slots | findSlot: 'loading'">{{ loadingText }}</ng-container>
+      <ng-container *anglifySlotOutlet="slots | findSlot : 'loading'">{{ loadingText }}</ng-container>
     </div>
     <div class="no-data-state" *ngIf="noDataTextVisible$ | async">
-      <ng-container *anglifySlotOutlet="slots | findSlot: 'no-data'">{{ noDataText }}</ng-container>
+      <ng-container *anglifySlotOutlet="slots | findSlot : 'no-data'">{{ noDataText }}</ng-container>
     </div>
     <ng-container *ngFor="let item of paginationService.limitedItems$ | async; let index = index; trackBy: trackByFn">
       <tr
@@ -72,7 +72,7 @@
           *ngFor="let header of dataService.filteredHeaders$ | async; let i = index; let c = count"
           [ngClass]="[header.align ? 'align-' + header.align : 'align-start', i === c - 1 ? 'last' : '']"
         >
-          <ng-container *anglifySlotOutlet="slots | findSlot: 'item:' + header.value; context: { $implicit: item }">
+          <ng-container *anglifySlotOutlet="slots | findSlot : 'item:' + header.value; context: { $implicit: item }">
             <div class="mobile-header" *ngIf="dataService.mobile$ | async">{{ header.text }}</div>
             <div>{{ header.computeContent ? header.computeContent(item) : item[header.value] }}</div>
           </ng-container>
@@ -80,14 +80,14 @@
       </tr>
       <tr *ngIf="expansionService.isExpanded$(index) | async">
         <td class="expanded-item">
-          <ng-container *anglifySlotOutlet="slots | findSlot: 'expanded-item'; context: { $implicit: item }"></ng-container>
+          <ng-container *anglifySlotOutlet="slots | findSlot : 'expanded-item'; context: { $implicit: item }"></ng-container>
         </td>
       </tr>
     </ng-container>
   </tbody>
 </table>
 <div class="footer" *ngIf="hideDefaultFooter === false">
-  <ng-container *anglifySlotOutlet="slots | findSlot: 'footer'">
+  <ng-container *anglifySlotOutlet="slots | findSlot : 'footer'">
     <anglify-menu
       *ngIf="dataService.showColumnsControl$ | async"
       class="columns-activator"
@@ -95,7 +95,7 @@
       [flip]="true"
       [closeOnMenuClick]="false"
     >
-      <ng-container *anglifySlotOutlet="slots | findSlot: 'columns-activator'">
+      <ng-container *anglifySlotOutlet="slots | findSlot : 'columns-activator'">
         <button class="default-columns-activator" type="button" anglifyButton appearance="text">
           <anglify-icon [icon]="internalIcons.viewColumn" [left]="true"></anglify-icon>
           Columns
@@ -105,7 +105,7 @@
         <div class="filter-menu">
           <anglify-list-item
             *ngFor="let column of dataService.headers$ | async; trackBy: headerTrackByFn"
-            [active]="column | isColumnVisible: (dataService.mobile$ | async) ?? false"
+            [active]="column | isColumnVisible : (dataService.mobile$ | async) ?? false"
             (click)="dataService.toggleHeaderVisibility(column)"
             (keydown.enter)="dataService.toggleHeaderVisibility(column)"
           >

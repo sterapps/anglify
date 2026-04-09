@@ -1,4 +1,4 @@
-import type { Options as OffsetOptions } from '@floating-ui/core/src/middleware/offset';
+import type { OffsetOptions } from '@floating-ui/core';
 import type { Position } from '../../composables/position/position.interface';
 
 export type MenuMountingPoint = HTMLElement | 'body' | 'parent';
