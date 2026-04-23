@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.48.1](https://github.com/sterapps/anglify/compare/v0.48.0...v0.48.1) (2026-04-23)
+
+
+### 🐛  Bug Fixes
+
+* **stepper:** use forwardRef for StepperService self-reference provider ([7dfd00d](https://github.com/sterapps/anglify/commit/7dfd00d68b0310b07daebc971e5f53cd061509da))
+
 ## [0.48.0](https://github.com/valentingavran/anglify/compare/v0.47.0...v0.48.0) (2026-04-07)
 
 
