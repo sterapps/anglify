@@ -4,6 +4,7 @@ import {
   Component,
   ContentChildren,
   ElementRef,
+  forwardRef,
   Inject,
   Injector,
   Input,
@@ -37,7 +38,7 @@ import { EntireStepperSettings } from './stepper.interface';
   styleUrls: ['./stepper.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    { provide: StepperService, useExisting: StepperComponent },
+    { provide: StepperService, useExisting: forwardRef(() => StepperComponent) },
     StepperSettingsService,
     createSettingsProvider<EntireStepperSettings>('anglifyStepperSettings', DEFAULT_STEPPER_SETTINGS, STEPPER_SETTINGS),
   ],
