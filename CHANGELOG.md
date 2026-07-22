@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.49.0](https://github.com/sterapps/anglify/compare/v0.48.1...v0.49.0) (2026-07-22)
+
+
+### 🚀  Features
+
+* **core:** upgrade from Angular 16 to Angular 17 ([d53cf36](https://github.com/sterapps/anglify/commit/d53cf36de6f39b585908a01eadf550c2cd583d6b))
+
+
+### 🐛  Bug Fixes
+
+* **core:** update published package metadata for Angular 17 ([011b318](https://github.com/sterapps/anglify/commit/011b31833c9af382c676203e4eaec92f218a7c8c))
+* **kitchensink:** add missing selector to root component ([9a15b2b](https://github.com/sterapps/anglify/commit/9a15b2bf9a4764ac4e066a0c775195ebda34beca))
+
+
+### 🛠  Other Commits
+
+* **deps:** remove unused cypress dependencies ([ddd4563](https://github.com/sterapps/anglify/commit/ddd456393f2b207360ed84202efcba1b5151dd87))
+* use Node 22 in release workflow to match CI ([9736cec](https://github.com/sterapps/anglify/commit/9736cecd07bd0ed3052878f0a56f89d30476135a))
+
 ### [0.48.1](https://github.com/sterapps/anglify/compare/v0.48.0...v0.48.1) (2026-04-23)
 
 
