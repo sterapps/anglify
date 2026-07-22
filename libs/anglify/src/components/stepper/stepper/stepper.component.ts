@@ -75,16 +75,16 @@ export class StepperComponent extends StepperService implements EntireStepperSet
   @Input() public disableAnimations = false;
 
   // eslint-disable-next-line rxjs/finnish, @angular-eslint/no-output-on-prefix
-  @Output() public readonly onPrevious = super.onPrevious$;
+  @Output() public readonly onPrevious = this.onPrevious$;
 
   // eslint-disable-next-line rxjs/finnish, @angular-eslint/no-output-on-prefix
-  @Output() public readonly onNext = super.onNext$;
+  @Output() public readonly onNext = this.onNext$;
 
   // eslint-disable-next-line rxjs/finnish, @angular-eslint/no-output-on-prefix
   @Output() public readonly onOrientationChange = this.stepperSettings.orientation$;
 
   // eslint-disable-next-line rxjs/finnish, @angular-eslint/no-output-on-prefix
-  @Output() public readonly onReset = super.onReset$;
+  @Output() public readonly onReset = this.onReset$;
 
   // eslint-disable-next-line rxjs/finnish, @angular-eslint/no-output-on-prefix
   @Output() public readonly onStepChange = this.selectedStep$;

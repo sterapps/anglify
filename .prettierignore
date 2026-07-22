@@ -6,4 +6,7 @@ coverage
 package-lock.json
 CHANGELOG.md
 apps/docs/src/assets/style-definitions
+apps/docs/src/assets/documentation.json
 .yarn
+
+/.nx/cache

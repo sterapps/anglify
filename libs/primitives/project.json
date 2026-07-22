@@ -25,15 +25,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/primitives"],
       "options": {
-        "jestConfig": "libs/primitives/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/primitives/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/primitives/**/*.ts", "libs/primitives/**/*.html"]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": []

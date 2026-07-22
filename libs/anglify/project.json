@@ -25,15 +25,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/anglify"],
       "options": {
-        "jestConfig": "libs/anglify/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/anglify/jest.config.ts"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/anglify/src/**/*.ts", "libs/anglify/src/**/*.html"]
-      }
+      "executor": "@nx/eslint:lint"
     }
   },
   "tags": []
