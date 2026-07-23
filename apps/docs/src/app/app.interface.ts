@@ -1,9 +1,8 @@
-import { HttpClientModule } from '@angular/common/http';
 import { CodeExampleComponent } from './components/code-example/code-example.component';
 import { ReferencesComponent } from './components/references/references.component';
 import { StylingTableComponent } from './components/styling-table/styling-table.component';
 
-export const ComponentPageModule = [ReferencesComponent, CodeExampleComponent, StylingTableComponent, HttpClientModule];
+export const ComponentPageModule = [ReferencesComponent, CodeExampleComponent, StylingTableComponent];
 
 export type Documentation = {
   components: ComponentDocumentation[];

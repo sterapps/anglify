@@ -1,6 +1,6 @@
 import { ButtonComponent, IconComponent } from '@anglify/components';
 import { AsyncPipe, NgIf } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, Injector, Input, ViewChild, ViewContainerRef, type OnInit, type Type } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { UntilDestroy } from '@ngneat/until-destroy';
@@ -18,7 +18,7 @@ const EXAMPLE_FOLDER_URL = environment.exampleFolderURL;
   templateUrl: './code-example.component.html',
   styleUrls: ['./code-example.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf, AsyncPipe, IconComponent, HttpClientModule, ButtonComponent, HighlightPipe, CopyButtonComponent],
+  imports: [NgIf, AsyncPipe, IconComponent, ButtonComponent, HighlightPipe, CopyButtonComponent],
 })
 export class CodeExampleComponent implements OnInit {
   @ViewChild('container', { static: true, read: ViewContainerRef }) public container!: ViewContainerRef;

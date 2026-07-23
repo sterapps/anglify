@@ -13,7 +13,7 @@ import {
   TooltipDirective,
 } from '@anglify/components';
 import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import type { EmbeddedViewRef } from '@angular/core';
 import { ChangeDetectionStrategy, Component, ElementRef, Renderer2, ViewChild, ViewContainerRef } from '@angular/core';
 import { NavigationStart, Router, RouterModule } from '@angular/router';
@@ -63,7 +63,6 @@ type NavGroup = {
     SlotDirective,
     ButtonComponent,
     TableOfContentsComponent,
-    HttpClientModule,
     CopyButtonComponent,
   ],
 })

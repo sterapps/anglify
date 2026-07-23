@@ -1,6 +1,6 @@
 import { ChipComponent, ItemGroupComponent, SlotDirective } from '@anglify/components';
 import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UntilDestroy } from '@ngneat/until-destroy';
@@ -29,7 +29,6 @@ import { ServiceAPIComponent } from '../service-api/service-api.component';
     NgForOf,
     NgIf,
     AsyncPipe,
-    HttpClientModule,
     SlotDirective,
   ],
 })
