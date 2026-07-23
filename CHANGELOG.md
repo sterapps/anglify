@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.49.1](https://github.com/sterapps/anglify/compare/v0.49.0-retry...v0.49.1) (2026-07-23)
+
+
+### 🐛  Bug Fixes
+
+* **core:** add repository field for npm provenance validation ([f335b56](https://github.com/sterapps/anglify/commit/f335b566c8db03e58416679a655f6750298985fb))
+
 ## [0.49.0](https://github.com/sterapps/anglify/compare/v0.48.1...v0.49.0) (2026-07-22)
 
 
