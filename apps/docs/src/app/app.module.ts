@@ -1,4 +1,5 @@
 import { ICON_SETTINGS, type IconSettings } from '@anglify/components';
+import { provideHttpClient } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { BrowserModule, Meta } from '@angular/platform-browser';
@@ -42,6 +43,7 @@ import { TocService } from './services/toc.service';
     HighlightPipe,
     MarkdownPipe,
     TocService,
+    provideHttpClient(),
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

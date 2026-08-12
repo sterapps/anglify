@@ -58,3 +58,4 @@ documentation.json
 !.yarn/versions
 
 .nx/cache
+.nx/workspace-data

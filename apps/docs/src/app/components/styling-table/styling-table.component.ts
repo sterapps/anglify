@@ -1,6 +1,6 @@
 import { SimpleTableComponent } from '@anglify/components';
 import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { take } from 'rxjs/operators';
@@ -16,7 +16,7 @@ type Style = {
   templateUrl: './styling-table.component.html',
   styleUrls: ['./styling-table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SimpleTableComponent, NgForOf, AsyncPipe, NgIf, HttpClientModule],
+  imports: [SimpleTableComponent, NgForOf, AsyncPipe, NgIf],
 })
 export class StylingTableComponent {
   @Input() public set component(component: string) {
