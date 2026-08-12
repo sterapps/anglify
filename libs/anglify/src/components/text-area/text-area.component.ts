@@ -11,7 +11,6 @@ import { EntireTextAreaSettings } from './text-area.interface';
 
 @Component({
   selector: 'anglify-text-area',
-  standalone: true,
   templateUrl: './text-area.component.html',
   styleUrls: ['./text-area.component.scss'],
   providers: [createSettingsProvider<EntireTextAreaSettings>('anglifyTextAreaSettings', DEFAULT_TEXT_AREA_SETTINGS, TEXT_AREA_SETTINGS)],

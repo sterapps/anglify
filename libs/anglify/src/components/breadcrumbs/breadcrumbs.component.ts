@@ -10,7 +10,6 @@ import { EntireBreadCrumbsSettings, type BreadCrumb } from './breadcrumbs.interf
 
 @Component({
   selector: 'anglify-breadcrumbs',
-  standalone: true,
   templateUrl: './breadcrumbs.component.html',
   styleUrls: ['./breadcrumbs.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

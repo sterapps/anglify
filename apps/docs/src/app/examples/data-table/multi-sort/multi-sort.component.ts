@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   templateUrl: './multi-sort.component.html',
   styleUrls: ['./multi-sort.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

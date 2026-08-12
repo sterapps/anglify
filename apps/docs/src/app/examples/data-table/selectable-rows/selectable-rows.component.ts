@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   templateUrl: './selectable-rows.component.html',
   styleUrls: ['./selectable-rows.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

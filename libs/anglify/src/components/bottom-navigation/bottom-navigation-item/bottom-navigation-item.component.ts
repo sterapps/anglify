@@ -30,7 +30,6 @@ import { EntireBottomNavigationItemSettings } from './bottom-navigation-item.int
 @UntilDestroy()
 @Component({
   selector: 'anglify-bottom-navigation-item',
-  standalone: true,
   templateUrl: './bottom-navigation-item.component.html',
   styleUrls: ['./bottom-navigation-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

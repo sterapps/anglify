@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { top10Movies } from '../../examples';
 
 @Component({
-  standalone: true,
   imports: [CommonModule, ComboboxComponent, SlotDirective, ChipComponent],
   templateUrl: './chips.component.html',
   styleUrls: ['./chips.component.scss'],

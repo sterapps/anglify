@@ -43,7 +43,6 @@ import { createSelectMachineConfig, SelectAction } from './select.machine';
 @UntilDestroy()
 @Component({
   selector: 'anglify-select',
-  standalone: true,
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.scss'],
   providers: [

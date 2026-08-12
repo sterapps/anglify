@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items, type FoodEntry } from '../data';
 
 @Component({
-  standalone: true,
   imports: [DataTableComponent],
   templateUrl: './computed-content.component.html',
   styleUrls: ['./computed-content.component.scss'],

@@ -41,7 +41,6 @@ import { AutocompleteAction, createAutocompleteMachineConfig } from './autocompl
 @UntilDestroy()
 @Component({
   selector: 'anglify-autocomplete',
-  standalone: true,
   templateUrl: './autocomplete.component.html',
   styleUrls: ['./autocomplete.component.scss'],
   animations: [rotate()],

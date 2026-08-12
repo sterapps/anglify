@@ -2,7 +2,6 @@ import { BadgeComponent, CheckboxComponent, IconComponent } from '@anglify/compo
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   imports: [BadgeComponent, IconComponent, CheckboxComponent],
   templateUrl: './visibility.component.html',
   styleUrls: ['./visibility.component.scss'],

@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
   templateUrl: './disabled-validation.component.html',
   styleUrls: ['./disabled-validation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

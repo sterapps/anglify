@@ -14,7 +14,6 @@ import { ServiceAPIComponent } from '../service-api/service-api.component';
 
 @UntilDestroy()
 @Component({
-  standalone: true,
   templateUrl: './inputs-table.component.html',
   styleUrls: ['./inputs-table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

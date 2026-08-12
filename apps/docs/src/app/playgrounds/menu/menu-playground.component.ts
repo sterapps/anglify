@@ -15,7 +15,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
   imports: [
     CommonModule,
     CheckboxComponent,

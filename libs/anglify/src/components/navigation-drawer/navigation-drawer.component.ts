@@ -24,7 +24,6 @@ import { EntireNavigationDrawerSettings, NavigationDrawerMode } from './navigati
 @UntilDestroy()
 @Component({
   selector: 'anglify-navigation-drawer',
-  standalone: true,
   templateUrl: './navigation-drawer.component.html',
   styleUrls: ['./navigation-drawer.component.scss'],
   providers: [

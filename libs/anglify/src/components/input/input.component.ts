@@ -26,7 +26,6 @@ import { InputAppearance } from './input.interface';
 @UntilDestroy()
 @Component({
   selector: 'anglify-input',
-  standalone: true,
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

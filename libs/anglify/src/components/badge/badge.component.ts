@@ -24,7 +24,6 @@ import { EntireBadgeSettings } from './badge.interface';
 @UntilDestroy()
 @Component({
   selector: 'anglify-badge',
-  standalone: true,
   imports: [SlotOutletDirective, FindSlotPipe, NgIf],
   templateUrl: './badge.component.html',
   styleUrls: ['./badge.component.scss'],

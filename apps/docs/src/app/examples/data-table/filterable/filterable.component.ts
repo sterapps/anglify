@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   templateUrl: './filterable.component.html',
   styleUrls: ['./filterable.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

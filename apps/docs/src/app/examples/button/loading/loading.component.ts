@@ -2,7 +2,6 @@ import { ButtonComponent, IconComponent, SlotDirective } from '@anglify/componen
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   imports: [ButtonComponent, IconComponent, SlotDirective],
   templateUrl: './loading.component.html',
   styleUrls: ['./loading.component.scss'],

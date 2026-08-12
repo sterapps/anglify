@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormBuilder, FormControl, ReactiveFormsModule, type FormGroup } from '@angular/forms';
 
 @Component({
-  standalone: true,
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

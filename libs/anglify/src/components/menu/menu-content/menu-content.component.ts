@@ -7,7 +7,6 @@ import { FindSlotPipe } from '../../../pipes/find-slot/find-slot.pipe';
 
 @Component({
   selector: 'anglify-menu-content',
-  standalone: true,
   imports: [CommonModule, SlotOutletDirective, FindSlotPipe],
   templateUrl: './menu-content.component.html',
   styleUrls: ['./menu-content.component.scss'],

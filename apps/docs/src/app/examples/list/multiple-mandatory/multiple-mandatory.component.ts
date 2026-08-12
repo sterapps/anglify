@@ -9,7 +9,6 @@ import {
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './multiple-mandatory.component.html',
   styleUrls: ['./multiple-mandatory.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

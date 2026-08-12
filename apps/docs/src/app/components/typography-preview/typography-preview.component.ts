@@ -11,7 +11,6 @@ type Type = {
 };
 
 @Component({
-  standalone: true,
   imports: [InteractionStateDirective, NgForOf, NgClass, NgIf, HighlightPipe, AsyncPipe, IconComponent],
   templateUrl: './typography-preview.component.html',
   styleUrls: ['./typography-preview.component.scss'],

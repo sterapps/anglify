@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
-  standalone: true,
   templateUrl: './server-error-handling.component.html',
   styleUrls: ['./server-error-handling.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

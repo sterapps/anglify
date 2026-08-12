@@ -23,7 +23,6 @@ import { StepperService } from '../stepper.service';
 @UntilDestroy()
 @Component({
   selector: 'anglify-stepper-header',
-  standalone: true,
   templateUrl: './stepper-header.component.html',
   styleUrls: ['./stepper-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

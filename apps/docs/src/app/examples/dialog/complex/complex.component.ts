@@ -5,7 +5,6 @@ import { ChangeDetectionStrategy, Component, Inject, Optional } from '@angular/c
 import { map } from 'rxjs';
 
 @Component({
-  standalone: true,
   template: `<div style="display: flex; flex-direction: column;">
     <p>{{ dialogContext.data!.title }}</p>
     <p>{{ dialogContext.data!.message }}</p>
@@ -31,7 +30,6 @@ export class DialogTestComponent {
 }
 
 @Component({
-  standalone: true,
   imports: [AsyncPipe, ButtonComponent],
   templateUrl: './complex.component.html',
   styleUrls: ['./complex.component.scss'],

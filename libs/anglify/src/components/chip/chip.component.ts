@@ -29,7 +29,6 @@ import { ChipAppearance, EntireChipSettings } from './chip.interface';
 @UntilDestroy()
 @Component({
   selector: 'anglify-chip',
-  standalone: true,
   templateUrl: './chip.component.html',
   styleUrls: ['./chip.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

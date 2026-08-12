@@ -2,7 +2,6 @@ import { ExpansionPanelComponent, ExpansionPanelsComponent } from '@anglify/comp
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './mandatory.component.html',
   styleUrls: ['./mandatory.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

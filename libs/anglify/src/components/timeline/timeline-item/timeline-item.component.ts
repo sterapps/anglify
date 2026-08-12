@@ -13,7 +13,6 @@ import { EntireTimelineItemSettings, TimelineItemAlignment } from './timeline-it
 @UntilDestroy()
 @Component({
   selector: 'anglify-timeline-item',
-  standalone: true,
   templateUrl: './timeline-item.component.html',
   styleUrls: ['./timeline-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

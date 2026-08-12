@@ -2,7 +2,6 @@ import { ButtonComponent, IconComponent, SlotDirective, TabComponent, TabGroupCo
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './extended-prominent.component.html',
   styleUrls: ['./extended-prominent.component.scss'],
   imports: [ToolbarComponent, ButtonComponent, IconComponent, TabGroupComponent, TabComponent, SlotDirective],

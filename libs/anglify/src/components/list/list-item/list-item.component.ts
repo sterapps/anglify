@@ -29,7 +29,6 @@ import { EntireListItemSettings } from './list-item.interface';
 @UntilDestroy()
 @Component({
   selector: 'anglify-list-item',
-  standalone: true,
   templateUrl: './list-item.component.html',
   styleUrls: ['./list-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

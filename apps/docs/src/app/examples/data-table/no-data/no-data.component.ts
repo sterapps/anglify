@@ -2,7 +2,6 @@ import { DataTableComponent, type DataTableHeader, SlotDirective } from '@anglif
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   imports: [DataTableComponent, SlotDirective],
   templateUrl: './no-data.component.html',
   styleUrls: ['./no-data.component.scss'],

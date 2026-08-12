@@ -3,7 +3,6 @@ import { NgForOf } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './normal.component.html',
   styleUrls: ['./normal.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

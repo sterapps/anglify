@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  standalone: true,
   templateUrl: './max.component.html',
   styleUrls: ['./max.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

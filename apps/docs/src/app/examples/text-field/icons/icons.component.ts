@@ -2,7 +2,6 @@ import { IconComponent, InputDirective, SlotDirective, TextFieldComponent } from
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './icons.component.html',
   styleUrls: ['./icons.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

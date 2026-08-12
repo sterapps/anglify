@@ -1,4 +1,3 @@
-import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostBinding, Inject, Input, Self } from '@angular/core';
 import { UntilDestroy } from '@ngneat/until-destroy';
 import { createSettingsProvider } from '../../factories/settings.factory';
@@ -9,7 +8,6 @@ import { EntireDividerSettings } from './divider.interface';
 @Component({
   selector: 'anglify-divider',
   standalone: true,
-  imports: [AsyncPipe],
   templateUrl: './divider.component.html',
   styleUrls: ['./divider.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

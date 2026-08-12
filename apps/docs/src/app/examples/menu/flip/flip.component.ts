@@ -3,7 +3,6 @@ import { NgTemplateOutlet } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   imports: [MenuComponent, ButtonComponent, SlotDirective, ListItemComponent, ListItemTitleComponent, NgTemplateOutlet],
   templateUrl: './flip.component.html',
   styleUrls: ['./flip.component.scss'],

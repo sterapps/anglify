@@ -2,7 +2,6 @@ import { ButtonGroupComponent, ButtonGroupItemComponent, IconComponent } from '@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './mandatory.component.html',
   styleUrls: ['./mandatory.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

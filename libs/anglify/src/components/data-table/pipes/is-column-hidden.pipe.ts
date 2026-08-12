@@ -9,9 +9,9 @@ import type { DataTableHeader } from '../data-table.interface';
 export class IsColumnVisiblePipe implements PipeTransform {
   public transform(value: DataTableHeader, isMobile: boolean): boolean {
     if (isMobile) {
-      return !value.hiddenOnMobile ?? true;
+      return !value.hiddenOnMobile;
     }
 
-    return !value.hidden ?? true;
+    return !value.hidden;
   }
 }

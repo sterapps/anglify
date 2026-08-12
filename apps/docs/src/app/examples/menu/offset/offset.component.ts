@@ -2,7 +2,6 @@ import { ButtonComponent, ListItemComponent, ListItemTitleComponent, MenuCompone
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   imports: [ButtonComponent, MenuComponent, SlotDirective, ListItemComponent, ListItemTitleComponent],
   templateUrl: './offset.component.html',
   styleUrls: ['./offset.component.scss'],

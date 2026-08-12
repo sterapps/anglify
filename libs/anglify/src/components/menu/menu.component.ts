@@ -1,4 +1,3 @@
-import { AsyncPipe, NgIf } from '@angular/common';
 import type { OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
 import {
   ApplicationRef,
@@ -19,10 +18,7 @@ import { autoUpdate, computePosition, flip, offset, shift } from '@floating-ui/d
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { distinctUntilChanged, fromEvent, map, merge, NEVER, of, switchMap, tap } from 'rxjs';
 import { SlotDirective } from '../../directives/slot/slot.directive';
-import { SlotOutletDirective } from '../../directives/slot-outlet/slot-outlet.directive';
-import { TrapFocusDirective } from '../../directives/trap-focus/trap-focus.directive';
 import { createSettingsProvider } from '../../factories/settings.factory';
-import { FindSlotPipe } from '../../pipes/find-slot/find-slot.pipe';
 import { getFirstAndLastFocusableElements } from '../../utils/functions';
 import { Machine } from '../../utils/machine';
 import { MenuContentComponent } from './menu-content/menu-content.component';
@@ -34,7 +30,6 @@ import { createMenuMachineConfig, MenuAction } from './menu.machine';
 @Component({
   selector: 'anglify-menu',
   standalone: true,
-  imports: [NgIf, FindSlotPipe, SlotOutletDirective, AsyncPipe, TrapFocusDirective, MenuContentComponent],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

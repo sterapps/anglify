@@ -9,7 +9,6 @@ import { EntireProgressLinearSettings } from './progress-linear.interface';
 
 @Component({
   selector: 'anglify-progress-linear',
-  standalone: true,
   templateUrl: './progress-linear.component.html',
   styleUrls: ['./progress-linear.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

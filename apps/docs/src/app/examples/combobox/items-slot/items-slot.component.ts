@@ -11,7 +11,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { top10Movies } from '../../examples';
 
 @Component({
-  standalone: true,
   imports: [
     CommonModule,
     ComboboxComponent,

@@ -21,7 +21,6 @@ import { DIALOG_CONTEXT, DIALOG_NODES } from './dialog.service';
 @UntilDestroy()
 @Component({
   selector: 'anglify-dialog',
-  standalone: true,
   imports: [TrapFocusDirective],
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.scss'],

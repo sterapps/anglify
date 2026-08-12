@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   templateUrl: './header-slot.component.html',
   styleUrls: ['./header-slot.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

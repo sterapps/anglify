@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
   imports: [AnglifyProgressLinearComponent, CheckboxComponent, RadioButtonComponent, FormsModule, NgIf],
   templateUrl: './progress-linear-playground.component.html',
   styleUrls: ['./progress-linear-playground.component.scss'],

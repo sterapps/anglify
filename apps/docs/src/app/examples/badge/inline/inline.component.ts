@@ -2,7 +2,6 @@ import { BadgeComponent, IconComponent, SlotDirective } from '@anglify/component
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   imports: [BadgeComponent, SlotDirective, IconComponent],
   templateUrl: './inline.component.html',
   styleUrls: ['./inline.component.scss'],

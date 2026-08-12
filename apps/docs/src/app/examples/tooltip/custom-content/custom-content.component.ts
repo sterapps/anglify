@@ -2,7 +2,6 @@ import { ButtonComponent, IconComponent, TooltipDirective } from '@anglify/compo
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './custom-content.component.html',
   styleUrls: ['./custom-content.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

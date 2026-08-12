@@ -1,7 +1,6 @@
 import {
   ButtonComponent,
   ChipComponent,
-  ClickStopPropagationDirective,
   IconComponent,
   ListItemComponent,
   ListItemTitleComponent,
@@ -15,7 +14,6 @@ import type { Movie } from '../../examples';
 import { top10Movies } from '../../examples';
 
 @Component({
-  standalone: true,
   imports: [
     CommonModule,
     SelectComponent,
@@ -25,7 +23,6 @@ import { top10Movies } from '../../examples';
     ChipComponent,
     IconComponent,
     ButtonComponent,
-    ClickStopPropagationDirective,
   ],
   templateUrl: './no-data-with-chips.component.html',
   styleUrls: ['./no-data-with-chips.component.scss'],
