@@ -1,5 +1,5 @@
 import { SimpleTableComponent } from '@anglify/components';
-import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import { ModifierType, type InjectableDocumentation } from '../../app.interface';
@@ -9,7 +9,7 @@ import { ModifierType, type InjectableDocumentation } from '../../app.interface'
   templateUrl: './service-api.component.html',
   styleUrls: ['./service-api.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf, SimpleTableComponent, AsyncPipe, NgForOf],
+  imports: [SimpleTableComponent, AsyncPipe],
 })
 export class ServiceAPIComponent {
   public get documentation() {

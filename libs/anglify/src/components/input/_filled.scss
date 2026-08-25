@@ -34,8 +34,8 @@
       top: $input-filled-label-top-distance-inactive;
       left: calc(#{$input-prepend-width} + #{$input-filled-label-start-offset});
       width: calc(
-        100% / #{$input-filled-label-scale-factor} - #{$input-prepend-width} - #{$input-append-width} - #{$input-filled-label-start-offset} -
-          #{$input-filled-label-end-offset}
+        100% / #{$input-filled-label-scale-factor} - #{$input-prepend-width} - #{$input-append-width} -
+          #{$input-filled-label-start-offset} - #{$input-filled-label-end-offset}
       );
       color: $input-filled-label-color-inactive;
       transform: translateY(-50%) scale($input-filled-label-scale-factor);

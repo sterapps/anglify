@@ -1,14 +1,18 @@
 <div class="prepend-item">
-  <div *ngIf="topStepConnectionLineVisible$ | async" class="step-connection-line top"></div>
-  <div *ngIf="bottomStepConnectionLineVisible$ | async" class="step-connection-line bottom"></div>
+  @if (topStepConnectionLineVisible$ | async) {
+    <div class="step-connection-line top"></div>
+  }
+  @if (bottomStepConnectionLineVisible$ | async) {
+    <div class="step-connection-line bottom"></div>
+  }
   <div class="step-indicator">
-    <div *ngIf="visited && (active$ | async) === false; else defaultIndicator">
-      <ng-container *anglifySlotOutlet="slots | findSlot : 'visitedIcon'"></ng-container>
-    </div>
+    @if (visited && (active$ | async) === false) {
+      <div>
+        <ng-container *anglifySlotOutlet="slots | findSlot: 'visitedIcon'"></ng-container>
+      </div>
+    } @else {
+      {{ ((index$ | async) ?? -1) + 1 }}
+    }
   </div>
 </div>
 <div class="label">{{ label$ | async }}</div>
-
-<ng-template #defaultIndicator>
-  {{ ((index$ | async) ?? -1) + 1 }}
-</ng-template>

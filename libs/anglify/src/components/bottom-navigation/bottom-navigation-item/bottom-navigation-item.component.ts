@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -41,7 +41,7 @@ import { EntireBottomNavigationItemSettings } from './bottom-navigation-item.int
     ),
     RIPPLE,
   ],
-  imports: [NgIf, FindSlotPipe, AsyncPipe, SlotOutletDirective],
+  imports: [FindSlotPipe, AsyncPipe, SlotOutletDirective],
 })
 export class BottomNavigationItemComponent implements EntireBottomNavigationItemSettings {
   @ContentChildren(SlotDirective) protected readonly slots?: QueryList<SlotDirective>;

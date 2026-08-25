@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -21,7 +20,7 @@ import { SNACKBAR_CONTEXT } from './snackbar.service';
   styleUrls: ['./snackbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [createSettingsProvider<EntireSnackbarSettings>('anglifySnackbarSettings', DEFAULT_SNACKBAR_SETTINGS, SNACKBAR_SETTINGS)],
-  imports: [NgIf, ButtonComponent],
+  imports: [ButtonComponent],
 })
 export class SnackbarComponent implements OnInit, AfterViewInit, OnDestroy {
   private timeout: number | null = null;

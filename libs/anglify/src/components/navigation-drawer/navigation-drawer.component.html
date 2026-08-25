@@ -3,11 +3,12 @@
     <ng-content></ng-content>
   </div>
 </div>
-<!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -->
-<div
-  *ngIf="(value$ | async) && mode === 'modal'"
-  class="anglify-navigation-drawer-backdrop"
-  @enterLeaveOpacityAnimation
-  [class.anglify-navigation-drawer-backdrop-show]="(value$ | async) && (mode$ | async) === 'modal'"
-  (click)="toggle()"
-></div>
+@if ((value$ | async) && mode === 'modal') {
+  <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events -->
+  <div
+    class="anglify-navigation-drawer-backdrop"
+    @enterLeaveOpacityAnimation
+    [class.anglify-navigation-drawer-backdrop-show]="(value$ | async) && (mode$ | async) === 'modal'"
+    (click)="toggle()"
+  ></div>
+}

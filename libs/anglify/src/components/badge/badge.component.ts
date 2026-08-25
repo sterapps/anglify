@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -24,7 +23,7 @@ import { EntireBadgeSettings } from './badge.interface';
 @UntilDestroy()
 @Component({
   selector: 'anglify-badge',
-  imports: [SlotOutletDirective, FindSlotPipe, NgIf],
+  imports: [SlotOutletDirective, FindSlotPipe],
   templateUrl: './badge.component.html',
   styleUrls: ['./badge.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

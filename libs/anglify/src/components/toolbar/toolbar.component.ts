@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -33,7 +32,7 @@ import { EntireToolbarSettings } from './toolbar.interface';
     createSettingsProvider<EntireToolbarSettings>('anglifyToolbarSettings', DEFAULT_TOOLBAR_SETTINGS, TOOLBAR_SETTINGS),
     ELEVATION,
   ],
-  imports: [NgIf, FindSlotPipe, SlotOutletDirective],
+  imports: [FindSlotPipe, SlotOutletDirective],
 })
 export class ToolbarComponent implements EntireToolbarSettings {
   @ContentChildren(SlotDirective) protected readonly slots?: QueryList<SlotDirective>;

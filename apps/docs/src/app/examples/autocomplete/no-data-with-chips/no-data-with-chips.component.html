@@ -1,6 +1,8 @@
 <anglify-autocomplete [items]="top10Movies" itemTextKey="label" appearance="outlined" [multiple]="true" label="Your favourite movies">
   <ng-template slot="selection" let-context>
-    <anglify-chip *ngFor="let item of context.selectedItems">{{ item.label }}</anglify-chip>
+    @for (item of context.selectedItems; track item) {
+      <anglify-chip>{{ item.label }}</anglify-chip>
+    }
   </ng-template>
   <ng-template slot="no-data">
     <anglify-list-item [state]="false" [ripple]="false" [disabled]="true">

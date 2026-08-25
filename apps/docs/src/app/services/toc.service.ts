@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable } from '@angular/core';
+import { Inject, Injectable, DOCUMENT } from '@angular/core';
 import { DomSanitizer, type SafeHtml } from '@angular/platform-browser';
 import { ReplaySubject } from 'rxjs';
 import { unwrapHtml } from 'safevalues';
@@ -19,7 +18,10 @@ export class TocService {
 
   public activeItemIndex$ = new ReplaySubject<number | null>(1);
 
-  public constructor(@Inject(DOCUMENT) private readonly document: Document, private readonly domSanitizer: DomSanitizer) {}
+  public constructor(
+    @Inject(DOCUMENT) private readonly document: Document,
+    private readonly domSanitizer: DomSanitizer
+  ) {}
 
   public genToc(docElement?: Element) {
     if (!docElement) {

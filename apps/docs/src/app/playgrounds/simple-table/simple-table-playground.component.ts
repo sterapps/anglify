@@ -1,10 +1,9 @@
 import { CheckboxComponent, InputDirective, SimpleTableComponent, TextFieldComponent } from '@anglify/components';
-import { NgForOf } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  imports: [SimpleTableComponent, CheckboxComponent, TextFieldComponent, InputDirective, FormsModule, NgForOf],
+  imports: [SimpleTableComponent, CheckboxComponent, TextFieldComponent, InputDirective, FormsModule],
   templateUrl: './simple-table-playground.component.html',
   styleUrls: ['./simple-table-playground.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

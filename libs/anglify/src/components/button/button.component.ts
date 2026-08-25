@@ -1,4 +1,4 @@
-import { NgClass, NgIf } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ContentChildren, HostBinding, Inject, Input, QueryList, Self } from '@angular/core';
 import { RIPPLE } from '../../composables/ripple/ripple.provider';
 import { RippleService } from '../../composables/ripple/ripple.service';
@@ -12,7 +12,7 @@ import { ButtonAppearance, EntireButtonSettings } from './button.interface';
 
 @Component({
   selector: 'button[anglifyButton]',
-  imports: [ProgressCircularComponent, NgIf, NgClass, SlotOutletDirective, FindSlotPipe],
+  imports: [ProgressCircularComponent, NgClass, SlotOutletDirective, FindSlotPipe],
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

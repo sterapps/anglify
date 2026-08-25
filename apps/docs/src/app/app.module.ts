@@ -49,7 +49,10 @@ import { TocService } from './services/toc.service';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {
-  public constructor(private readonly meta: Meta, private readonly injector: Injector) {
+  public constructor(
+    private readonly meta: Meta,
+    private readonly injector: Injector
+  ) {
     this.meta.addTag({ name: 'description', content: environment.description });
     this.meta.addTag({ name: 'keywords', content: environment.keywords.toString() });
 

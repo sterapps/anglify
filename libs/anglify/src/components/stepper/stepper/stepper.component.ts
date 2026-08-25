@@ -1,4 +1,4 @@
-import { AsyncPipe, NgForOf, NgIf, NgTemplateOutlet } from '@angular/common';
+import { AsyncPipe, NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -42,17 +42,7 @@ import { EntireStepperSettings } from './stepper.interface';
     createSettingsProvider<EntireStepperSettings>('anglifyStepperSettings', DEFAULT_STEPPER_SETTINGS, STEPPER_SETTINGS),
   ],
   animations: [fastInFastOutY({ duration: '500ms' }), slide()],
-  imports: [
-    StepperHeaderComponent,
-    AsyncPipe,
-    IconComponent,
-    NgTemplateOutlet,
-    NgForOf,
-    NgIf,
-    SlotOutletDirective,
-    FindSlotPipe,
-    SlotDirective,
-  ],
+  imports: [StepperHeaderComponent, AsyncPipe, IconComponent, NgTemplateOutlet, SlotOutletDirective, FindSlotPipe, SlotDirective],
 })
 export class StepperComponent extends StepperService implements EntireStepperSettings, AfterContentInit {
   @ContentChildren(StepDirective) private readonly _steps?: QueryList<StepDirective>;

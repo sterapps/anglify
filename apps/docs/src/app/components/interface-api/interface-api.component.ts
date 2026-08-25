@@ -1,5 +1,5 @@
 import { SimpleTableComponent } from '@anglify/components';
-import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import type { InterfaceDocumentation } from '../../app.interface';
@@ -9,7 +9,7 @@ import type { InterfaceDocumentation } from '../../app.interface';
   templateUrl: './interface-api.component.html',
   styleUrls: ['./interface-api.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf, SimpleTableComponent, AsyncPipe, NgForOf],
+  imports: [SimpleTableComponent, AsyncPipe],
 })
 export class InterfaceAPIComponent {
   public get documentation() {

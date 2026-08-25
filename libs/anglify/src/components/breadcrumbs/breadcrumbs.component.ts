@@ -1,4 +1,3 @@
-import { NgForOf, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ContentChildren, Inject, Input, QueryList, Self } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SlotDirective } from '../../directives/slot/slot.directive';
@@ -16,7 +15,7 @@ import { EntireBreadCrumbsSettings, type BreadCrumb } from './breadcrumbs.interf
   providers: [
     createSettingsProvider<EntireBreadCrumbsSettings>('anglifyBreadcrumbsSettings', DEFAULT_BREADCRUMBS_SETTINGS, BREADCRUMBS_SETTINGS),
   ],
-  imports: [NgIf, NgForOf, RouterModule, FindSlotPipe, SlotOutletDirective],
+  imports: [RouterModule, FindSlotPipe, SlotOutletDirective],
 })
 export class BreadcrumbsComponent implements EntireBreadCrumbsSettings {
   @ContentChildren(SlotDirective) protected readonly slots?: QueryList<SlotDirective>;

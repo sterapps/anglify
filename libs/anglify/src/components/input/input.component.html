@@ -1,52 +1,58 @@
 <!-- eslint-disable @angular-eslint/template/mouse-events-have-key-events, @angular-eslint/template/click-events-have-key-events-->
 <div class="anglify-input-prepend">
-  <ng-container *anglifySlotOutlet="slots | findSlot : 'prepend'"></ng-container>
+  <ng-container *anglifySlotOutlet="slots | findSlot: 'prepend'"></ng-container>
 </div>
 <div class="anglify-input-container" anglifyInteractionState [active]="false" (click)="onInputClick.next()">
   <div class="anglify-input-prepend-inner" #prependInner>
-    <ng-container *anglifySlotOutlet="slots | findSlot : 'prepend-inner'"></ng-container>
+    <ng-container *anglifySlotOutlet="slots | findSlot: 'prepend-inner'"></ng-container>
   </div>
   <div class="anglify-input-content" #content>
     <ng-content></ng-content>
   </div>
   <div class="anglify-input-append-inner" #appendInner>
-    <ng-container *anglifySlotOutlet="slots | findSlot : 'append-inner'"></ng-container>
+    <ng-container *anglifySlotOutlet="slots | findSlot: 'append-inner'"></ng-container>
   </div>
   <div class="anglify-input-border">
     <div class="start"></div>
     <div class="notch">
       <label [for]="inputId" #label>
-        <ng-container *anglifySlotOutlet="slots | findSlot : 'label'"></ng-container>
+        <ng-container *anglifySlotOutlet="slots | findSlot: 'label'"></ng-container>
       </label>
     </div>
     <div class="end"></div>
   </div>
 </div>
 <div class="anglify-input-append">
-  <ng-container *anglifySlotOutlet="slots | findSlot : 'append'"></ng-container>
+  <ng-container *anglifySlotOutlet="slots | findSlot: 'append'"></ng-container>
 </div>
 <div class="anglify-input-details" #inputDetails>
   <div class="hint" #hintWrapper>
-    <span
-      *ngIf="error$ | async as e; else hintTemplate"
-      #hintElement
-      [anglifyTooltip]="e"
-      [anglifyToolTipConfig]="{ mountingPoint: inputDetails, disabled: !hintOverflow }"
-      (mouseover)="isHintOverflowing()"
-      >{{ e }}</span
-    >
-    <ng-template #hintTemplate>
+    @if (error$ | async; as e) {
       <span
-        *ngIf="hint"
         #hintElement
-        [anglifyTooltip]="hint"
+        [anglifyTooltip]="e"
         [anglifyToolTipConfig]="{ mountingPoint: inputDetails, disabled: !hintOverflow }"
         (mouseover)="isHintOverflowing()"
-        >{{ hint }}</span
+        >{{ e }}</span
       >
-    </ng-template>
+    } @else {
+      @if (hint) {
+        <span
+          #hintElement
+          [anglifyTooltip]="hint"
+          [anglifyToolTipConfig]="{ mountingPoint: inputDetails, disabled: !hintOverflow }"
+          (mouseover)="isHintOverflowing()"
+          >{{ hint }}</span
+        >
+      }
+    }
   </div>
-  <div class="counter" *ngIf="counter">
-    {{ length }}<span *ngIf="maxLength !== undefined">/{{ maxLength }}</span>
-  </div>
+  @if (counter) {
+    <div class="counter">
+      {{ length }}
+      @if (maxLength !== undefined) {
+        <span>/{{ maxLength }}</span>
+      }
+    </div>
+  }
 </div>

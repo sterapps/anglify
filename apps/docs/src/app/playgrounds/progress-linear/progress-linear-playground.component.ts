@@ -1,10 +1,9 @@
 import { CheckboxComponent, ProgressLinearComponent as AnglifyProgressLinearComponent, RadioButtonComponent } from '@anglify/components';
-import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  imports: [AnglifyProgressLinearComponent, CheckboxComponent, RadioButtonComponent, FormsModule, NgIf],
+  imports: [AnglifyProgressLinearComponent, CheckboxComponent, RadioButtonComponent, FormsModule],
   templateUrl: './progress-linear-playground.component.html',
   styleUrls: ['./progress-linear-playground.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

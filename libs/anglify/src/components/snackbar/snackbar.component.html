@@ -2,7 +2,9 @@
   <div class="label">
     {{ context.data?.label }}
   </div>
-  <div class="actions" *ngIf="context.data?.actions">
-    <button type="button" anglifyButton appearance="text" (click)="dismiss()">{{ context.data?.actions?.label }}</button>
-  </div>
+  @if (context.data?.actions) {
+    <div class="actions">
+      <button type="button" anglifyButton appearance="text" (click)="dismiss()">{{ context.data?.actions?.label }}</button>
+    </div>
+  }
 </div>

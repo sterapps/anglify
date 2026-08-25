@@ -12,12 +12,12 @@
     <input type="range" min="0" max="100" [(ngModel)]="size" />
     <anglify-radio-button [(ngModel)]="mode" name="mode" value="indeterminate">Indeterminate</anglify-radio-button>
     <anglify-radio-button [(ngModel)]="mode" name="mode" value="regular">Regular</anglify-radio-button>
-    <ng-container *ngIf="!isIndeterminate">
+    @if (!isIndeterminate) {
       <span class="body-l">Progress</span>
       <input type="range" min="0" max="100" [(ngModel)]="progress" />
       <span class="body-l">Buffer</span>
       <input type="range" min="0" max="100" [(ngModel)]="buffer" />
       <anglify-checkbox type="checkbox" [(ngModel)]="stream">Stream</anglify-checkbox>
-    </ng-container>
+    }
   </div>
 </div>

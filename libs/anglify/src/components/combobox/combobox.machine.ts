@@ -195,7 +195,8 @@ function selectSingleItem(context: ComboboxContext, item: any) {
 
 export function handleSelection(context: ComboboxContext, action: ComboboxAction, payload: any, previous: ComboboxState) {
   const functionToCall = context.multiple ? toggleItem : selectSingleItem;
-  if (previous === ComboboxState.S1) handleArrowDown(context, previous); // if we are in S1 and press enter, we want to open the menu
+  if (previous === ComboboxState.S1)
+    handleArrowDown(context, previous); // if we are in S1 and press enter, we want to open the menu
   else if (context.highlightedIndex === undefined) {
     const item = context.items.find(item => (context.itemTextKey ? item[context.itemTextKey] === context.search : item === context.search));
     if (item) functionToCall(context, item);

@@ -18,7 +18,8 @@
       top: $input-outlined-label-top-distance;
       left: calc(#{$input-prepend-width} - var(--anglify-notched-outline-start-width) + #{$input-outlined-label-start-offset});
       width: calc(
-        #{$input-content-width} / #{$input-outlined-label-scale-factor} - #{$input-outlined-label-start-offset} - #{$input-outlined-label-end-offset}
+        #{$input-content-width} / #{$input-outlined-label-scale-factor} - #{$input-outlined-label-start-offset} -
+          #{$input-outlined-label-end-offset}
       );
       color: $input-outlined-label-color-inactive;
       transform: translateY(-50%) scale($input-outlined-label-scale-factor);

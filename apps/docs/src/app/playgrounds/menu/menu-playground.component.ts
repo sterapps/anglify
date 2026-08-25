@@ -10,13 +10,11 @@ import {
   SlotDirective,
   TextFieldComponent,
 } from '@anglify/components';
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   imports: [
-    CommonModule,
     CheckboxComponent,
     FormsModule,
     MenuComponent,

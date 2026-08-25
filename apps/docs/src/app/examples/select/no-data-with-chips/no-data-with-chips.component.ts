@@ -8,22 +8,12 @@ import {
   SlotDirective,
   SnackbarService,
 } from '@anglify/components';
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import type { Movie } from '../../examples';
 import { top10Movies } from '../../examples';
 
 @Component({
-  imports: [
-    CommonModule,
-    SelectComponent,
-    SlotDirective,
-    ListItemComponent,
-    ListItemTitleComponent,
-    ChipComponent,
-    IconComponent,
-    ButtonComponent,
-  ],
+  imports: [SelectComponent, SlotDirective, ListItemComponent, ListItemTitleComponent, ChipComponent, IconComponent, ButtonComponent],
   templateUrl: './no-data-with-chips.component.html',
   styleUrls: ['./no-data-with-chips.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

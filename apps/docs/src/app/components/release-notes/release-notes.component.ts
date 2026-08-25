@@ -1,5 +1,5 @@
 import { ChipComponent } from '@anglify/components';
-import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MarkdownPipe } from '../../pipes/markdown.pipe';
@@ -13,7 +13,7 @@ export type Release = {
 };
 
 @Component({
-  imports: [NgForOf, ChipComponent, AsyncPipe, NgIf, MarkdownPipe],
+  imports: [ChipComponent, AsyncPipe, MarkdownPipe],
   templateUrl: './release-notes.component.html',
   styleUrls: ['./release-notes.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

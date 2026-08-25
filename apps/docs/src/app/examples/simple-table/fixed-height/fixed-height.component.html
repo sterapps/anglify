@@ -6,10 +6,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of desserts">
-      <td>{{ item.name }}</td>
-      <td>{{ item.calories }}</td>
-    </tr>
+    @for (item of desserts; track item) {
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.calories }}</td>
+      </tr>
+    }
   </tbody>
   <tfoot>
     <tr>

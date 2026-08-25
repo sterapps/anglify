@@ -14,7 +14,7 @@ export type DataTableHeader<T = any> = {
 export type DataTableItem<
   T = {
     [key: string]: any;
-  }
+  },
 > = T;
 
 export type SortSetting = {

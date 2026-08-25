@@ -1,4 +1,4 @@
-<ng-container *ngIf="documentation?.inputsClass?.length">
+@if (documentation?.inputsClass?.length) {
   <h3>Inputs</h3>
   <anglify-simple-table>
     <thead>
@@ -9,16 +9,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let input of documentation?.inputsClass">
-        <td>{{ input.name }}</td>
-        <td>{{ input.type }}</td>
-        <td [innerHTML]="input.description"></td>
-      </tr>
+      @for (input of documentation?.inputsClass; track input) {
+        <tr>
+          <td>{{ input.name }}</td>
+          <td>{{ input.type }}</td>
+          <td [innerHTML]="input.description"></td>
+        </tr>
+      }
     </tbody>
   </anglify-simple-table>
-</ng-container>
-
-<ng-container *ngIf="documentation?.outputsClass?.length">
+}
+@if (documentation?.outputsClass?.length) {
   <h3>Outputs</h3>
   <anglify-simple-table>
     <thead>
@@ -28,15 +29,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let input of documentation?.outputsClass">
-        <td>{{ input.name }}</td>
-        <td [innerHTML]="input.description"></td>
-      </tr>
+      @for (input of documentation?.outputsClass; track input) {
+        <tr>
+          <td>{{ input.name }}</td>
+          <td [innerHTML]="input.description"></td>
+        </tr>
+      }
     </tbody>
   </anglify-simple-table>
-</ng-container>
-
-<ng-container *ngIf="publicMethods$ | async as publicMethods">
+}
+@if (publicMethods$ | async; as publicMethods) {
   <h3>Methods</h3>
   <anglify-simple-table>
     <thead>
@@ -46,10 +48,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let method of publicMethods">
-        <td>{{ method.name }}</td>
-        <td>{{ method.description }}</td>
-      </tr>
+      @for (method of publicMethods; track method) {
+        <tr>
+          <td>{{ method.name }}</td>
+          <td>{{ method.description }}</td>
+        </tr>
+      }
     </tbody>
   </anglify-simple-table>
-</ng-container>
+}

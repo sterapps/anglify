@@ -1,5 +1,5 @@
 import { fastInFastOutY, IconComponent, InteractionStateDirective, rotate } from '@anglify/components';
-import { AsyncPipe, NgClass, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe, NgClass } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HighlightPipe } from '../../pipes/highlight.pipe';
@@ -11,7 +11,7 @@ type Type = {
 };
 
 @Component({
-  imports: [InteractionStateDirective, NgForOf, NgClass, NgIf, HighlightPipe, AsyncPipe, IconComponent],
+  imports: [InteractionStateDirective, NgClass, HighlightPipe, AsyncPipe, IconComponent],
   templateUrl: './typography-preview.component.html',
   styleUrls: ['./typography-preview.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

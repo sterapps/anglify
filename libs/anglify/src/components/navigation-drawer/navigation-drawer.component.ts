@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -37,7 +37,7 @@ import { EntireNavigationDrawerSettings, NavigationDrawerMode } from './navigati
     enterLeaveOpacityAnimation(), // used for backdrop opacity transition
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf, AsyncPipe],
+  imports: [AsyncPipe],
 })
 export class NavigationDrawerComponent implements EntireNavigationDrawerSettings, AfterViewInit {
   @ContentChildren(ListComponent) private readonly lists?: QueryList<ListComponent>;
