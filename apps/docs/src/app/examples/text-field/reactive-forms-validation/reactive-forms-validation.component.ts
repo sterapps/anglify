@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
   templateUrl: './reactive-forms-validation.component.html',
   styleUrls: ['./reactive-forms-validation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

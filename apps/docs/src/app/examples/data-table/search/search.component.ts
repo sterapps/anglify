@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -2,5 +2,13 @@
   "extends": ["../../.eslintrc.json"],
   "parserOptions": {
     "project": ["./tsconfig(.*)?.json"]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "@angular-eslint/prefer-standalone": "off"
+      }
+    }
+  ]
 }

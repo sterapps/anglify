@@ -2,7 +2,6 @@ import { ButtonComponent, SnackbarService } from '@anglify/components';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './indefinitely.component.html',
   styleUrls: ['./indefinitely.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

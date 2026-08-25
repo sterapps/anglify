@@ -7,7 +7,6 @@ import { EntireRadioButtonSettings } from './radio-button.interface';
 
 @Component({
   selector: 'anglify-radio-button',
-  standalone: true,
   templateUrl: './radio-button.component.html',
   styleUrls: ['./radio-button.component.scss'],
   providers: [

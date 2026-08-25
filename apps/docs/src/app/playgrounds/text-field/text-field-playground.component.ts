@@ -12,7 +12,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
   imports: [TextFieldComponent, InputDirective, CheckboxComponent, SlotDirective, RadioButtonComponent, FormsModule, IconComponent, NgIf],
   templateUrl: './text-field-playground.component.html',
   styleUrls: ['./text-field-playground.component.scss'],

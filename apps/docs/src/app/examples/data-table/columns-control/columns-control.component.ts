@@ -5,7 +5,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   imports: [DataTableComponent, AsyncPipe, SlotDirective, ButtonComponent, IconComponent],
   templateUrl: './columns-control.component.html',
   styleUrls: ['./columns-control.component.scss'],

@@ -2,7 +2,6 @@ import { CardComponent, ItemGroupComponent, SlotDirective } from '@anglify/compo
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './multiple-mandatory.component.html',
   styleUrls: ['./multiple-mandatory.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

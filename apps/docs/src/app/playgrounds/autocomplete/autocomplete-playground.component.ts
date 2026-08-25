@@ -15,7 +15,6 @@ import { FormsModule } from '@angular/forms';
 import { top10Movies } from '../../examples/examples';
 
 @Component({
-  standalone: true,
   imports: [
     CommonModule,
     AutocompleteComponent,

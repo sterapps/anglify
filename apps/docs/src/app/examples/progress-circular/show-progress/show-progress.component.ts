@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { interval, map } from 'rxjs';
 
 @Component({
-  standalone: true,
   templateUrl: './show-progress.component.html',
   styleUrls: ['./show-progress.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

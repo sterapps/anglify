@@ -14,7 +14,6 @@ type Account = {
 };
 
 @Component({
-  standalone: true,
   templateUrl: './complex-data.component.html',
   styleUrls: ['./complex-data.component.scss'],
   imports: [DataTableComponent, CheckboxComponent, SlotDirective],

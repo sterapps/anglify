@@ -2,7 +2,6 @@ import { ButtonComponent, TooltipDirective, type TooltipSettings } from '@anglif
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './custom-mounting-point.component.html',
   styleUrls: ['./custom-mounting-point.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

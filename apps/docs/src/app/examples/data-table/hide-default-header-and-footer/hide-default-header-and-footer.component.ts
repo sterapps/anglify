@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   templateUrl: './hide-default-header-and-footer.component.html',
   styleUrls: ['./hide-default-header-and-footer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

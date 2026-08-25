@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  standalone: true,
   imports: [CardComponent, IconComponent],
   templateUrl: './application-layouts-preview.component.html',
   styleUrls: ['./application-layouts-preview.component.scss'],

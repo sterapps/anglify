@@ -11,7 +11,6 @@ import { EntireTextFieldSettings } from './text-field.interface';
 
 @Component({
   selector: 'anglify-text-field',
-  standalone: true,
   templateUrl: './text-field.component.html',
   styleUrls: ['./text-field.component.scss'],
   providers: [

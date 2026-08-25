@@ -42,7 +42,6 @@ type NavGroup = {
 
 @Component({
   selector: 'anglify-default',
-  standalone: true,
   templateUrl: './default.component.html',
   styleUrls: ['./default.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -63,7 +62,6 @@ type NavGroup = {
     SlotDirective,
     ButtonComponent,
     TableOfContentsComponent,
-    CopyButtonComponent,
   ],
 })
 export class DefaultComponent {

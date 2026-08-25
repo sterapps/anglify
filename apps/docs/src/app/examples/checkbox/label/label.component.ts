@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  standalone: true,
   imports: [CommonModule, CheckboxComponent, ClickStopPropagationDirective, RouterModule],
   templateUrl: './label.component.html',
   styleUrls: ['./label.component.scss'],

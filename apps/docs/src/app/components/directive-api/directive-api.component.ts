@@ -6,7 +6,6 @@ import { ModifierType, type DirectiveDocumentation } from '../../app.interface';
 
 @Component({
   selector: 'app-directive-api',
-  standalone: true,
   templateUrl: './directive-api.component.html',
   styleUrls: ['./directive-api.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

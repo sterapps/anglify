@@ -2,7 +2,6 @@ import { CheckboxComponent, IconComponent, SlotDirective } from '@anglify/compon
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './sizes.component.html',
   styleUrls: ['./sizes.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

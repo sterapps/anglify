@@ -16,20 +16,18 @@ import { BehaviorSubject, filter, map, startWith, take, tap } from 'rxjs';
 import { SlotDirective } from '../../directives/slot/slot.directive';
 import { SlotOutletDirective } from '../../directives/slot-outlet/slot-outlet.directive';
 import { createSettingsProvider } from '../../factories/settings.factory';
-import { FindSlotPipe } from '../../pipes/find-slot/find-slot.pipe';
 import { DEFAULT_ITEM_GROUP_SETTINGS, ITEM_GROUP_SETTINGS } from './item-group-settings.token';
 import { EntireItemGroupSettings } from './item-group.interface';
 
 @UntilDestroy()
 @Component({
   selector: 'anglify-item-group',
-  standalone: true,
   templateUrl: './item-group.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     createSettingsProvider<EntireItemGroupSettings>('anglifyItemGroupSettings', DEFAULT_ITEM_GROUP_SETTINGS, ITEM_GROUP_SETTINGS),
   ],
-  imports: [NgForOf, AsyncPipe, SlotOutletDirective, FindSlotPipe],
+  imports: [NgForOf, AsyncPipe, SlotOutletDirective],
 })
 export class ItemGroupComponent implements AfterViewInit {
   @ContentChildren(SlotDirective, { descendants: true }) private readonly allSlots?: QueryList<SlotDirective<boolean>>;

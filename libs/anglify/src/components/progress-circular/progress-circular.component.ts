@@ -6,7 +6,6 @@ import { EntireProgressCircularSettings } from './progress-circular.interface';
 
 @Component({
   selector: 'anglify-progress-circular',
-  standalone: true,
   templateUrl: './progress-circular.component.html',
   styleUrls: ['./progress-circular.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -17,7 +17,6 @@ import { SNACKBAR_CONTEXT } from './snackbar.service';
 
 @Component({
   selector: 'anglify-snackbar',
-  standalone: true,
   templateUrl: './snackbar.component.html',
   styleUrls: ['./snackbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

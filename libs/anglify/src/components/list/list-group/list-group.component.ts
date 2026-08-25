@@ -17,7 +17,6 @@ import { EntireListGroupSettings } from './list-group.interface';
 @UntilDestroy()
 @Component({
   selector: 'anglify-list-group',
-  standalone: true,
   templateUrl: './list-group.component.html',
   styleUrls: ['./list-group.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

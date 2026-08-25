@@ -2,7 +2,6 @@ import { SlotDirective, TimelineComponent, TimelineItemComponent } from '@anglif
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './opposite.component.html',
   styleUrls: ['./opposite.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

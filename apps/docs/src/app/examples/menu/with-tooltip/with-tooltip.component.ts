@@ -9,7 +9,6 @@ import {
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   imports: [ButtonComponent, MenuComponent, SlotDirective, ListItemComponent, ListItemTitleComponent, TooltipDirective],
   templateUrl: './with-tooltip.component.html',
   styleUrls: ['./with-tooltip.component.scss'],

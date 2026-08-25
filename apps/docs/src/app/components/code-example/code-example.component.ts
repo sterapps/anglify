@@ -14,7 +14,6 @@ const EXAMPLE_FOLDER_URL = environment.exampleFolderURL;
 
 @UntilDestroy()
 @Component({
-  standalone: true,
   templateUrl: './code-example.component.html',
   styleUrls: ['./code-example.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

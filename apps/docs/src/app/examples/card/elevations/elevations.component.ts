@@ -2,7 +2,6 @@ import { CardComponent } from '@anglify/components';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './elevations.component.html',
   styleUrls: ['./elevations.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

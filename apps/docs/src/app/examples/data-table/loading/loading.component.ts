@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   imports: [DataTableComponent, SlotDirective],
   templateUrl: './loading.component.html',
   styleUrls: ['./loading.component.scss'],

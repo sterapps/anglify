@@ -2,7 +2,6 @@ import { ButtonComponent, DialogService } from '@anglify/components';
 import { ChangeDetectionStrategy, Component, TemplateRef, ViewChild } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './from-template.component.html',
   styleUrls: ['./from-template.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

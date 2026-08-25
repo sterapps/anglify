@@ -33,7 +33,6 @@ import { EntireStepperSettings } from './stepper.interface';
 @UntilDestroy()
 @Component({
   selector: 'anglify-stepper',
-  standalone: true,
   templateUrl: './stepper.component.html',
   styleUrls: ['./stepper.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

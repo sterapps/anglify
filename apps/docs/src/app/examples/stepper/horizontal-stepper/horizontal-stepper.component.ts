@@ -2,7 +2,6 @@ import { ButtonComponent, StepDirective, StepperComponent, StepperNextDirective,
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './horizontal-stepper.component.html',
   styleUrls: ['./horizontal-stepper.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

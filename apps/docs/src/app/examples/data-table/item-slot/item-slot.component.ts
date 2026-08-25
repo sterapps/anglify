@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   templateUrl: './item-slot.component.html',
   styleUrls: ['./item-slot.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

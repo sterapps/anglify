@@ -2,7 +2,6 @@ import { BottomNavigationComponent, BottomNavigationItemComponent, IconComponent
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './grow.component.html',
   styleUrls: ['./grow.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

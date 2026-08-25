@@ -11,7 +11,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { environment } from 'apps/docs/src/environments/environment';
 
 @Component({
-  standalone: true,
   templateUrl: './base.component.html',
   styleUrls: ['./base.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

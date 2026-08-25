@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
   imports: [SimpleTableComponent, CheckboxComponent, TextFieldComponent, InputDirective, FormsModule, NgForOf],
   templateUrl: './simple-table-playground.component.html',
   styleUrls: ['./simple-table-playground.component.scss'],

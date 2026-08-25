@@ -24,7 +24,6 @@ import { EntireOTPInputSettings } from './otp-input.interface';
 @UntilDestroy()
 @Component({
   selector: 'anglify-otp-input',
-  standalone: true,
   templateUrl: './otp-input.component.html',
   styleUrls: ['./otp-input.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

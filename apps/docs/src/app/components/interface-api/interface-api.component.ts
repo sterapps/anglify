@@ -6,7 +6,6 @@ import type { InterfaceDocumentation } from '../../app.interface';
 
 @Component({
   selector: 'app-interface-api',
-  standalone: true,
   templateUrl: './interface-api.component.html',
   styleUrls: ['./interface-api.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

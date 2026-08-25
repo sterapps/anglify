@@ -17,7 +17,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class DialogTestComponent {}
 
 @Component({
-  standalone: true,
   templateUrl: './simple.component.html',
   styleUrls: ['./simple.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -2,7 +2,6 @@ import { ButtonComponent, IconComponent, SlotDirective, ToolbarComponent } from 
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './prominent.component.html',
   styleUrls: ['./prominent.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

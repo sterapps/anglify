@@ -32,7 +32,6 @@ import { EntireExpansionPanelSettings } from './expansion-panel.interface';
 @UntilDestroy()
 @Component({
   selector: 'anglify-expansion-panel',
-  standalone: true,
   templateUrl: './expansion-panel.component.html',
   styleUrls: ['./expansion-panel.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

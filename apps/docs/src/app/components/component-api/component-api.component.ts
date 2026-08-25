@@ -6,7 +6,6 @@ import { ModifierType, type ComponentDocumentation } from '../../app.interface';
 
 @Component({
   selector: 'app-component-api',
-  standalone: true,
   templateUrl: './component-api.component.html',
   styleUrls: ['./component-api.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

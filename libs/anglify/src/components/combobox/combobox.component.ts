@@ -41,7 +41,6 @@ import { ComboboxAction, createComboboxMachineConfig } from './combobox.machine'
 @UntilDestroy()
 @Component({
   selector: 'anglify-combobox',
-  standalone: true,
   templateUrl: './combobox.component.html',
   styleUrls: ['./combobox.component.scss'],
   animations: [rotate()],

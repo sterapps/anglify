@@ -12,7 +12,6 @@ type Style = {
 
 @Component({
   selector: 'app-styling-table',
-  standalone: true,
   templateUrl: './styling-table.component.html',
   styleUrls: ['./styling-table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

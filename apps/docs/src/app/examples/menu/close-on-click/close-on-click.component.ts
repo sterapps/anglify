@@ -9,7 +9,6 @@ import {
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   imports: [ButtonComponent, MenuComponent, SlotDirective, ListItemComponent, ListItemTitleComponent, CheckboxComponent],
   templateUrl: './close-on-click.component.html',
   styleUrls: ['./close-on-click.component.scss'],

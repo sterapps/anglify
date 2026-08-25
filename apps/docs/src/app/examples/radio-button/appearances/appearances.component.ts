@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
   templateUrl: './appearances.component.html',
   styleUrls: ['./appearances.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

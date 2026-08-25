@@ -4,7 +4,6 @@ import { TocService, type TocItem } from '../../services/toc.service';
 
 @Component({
   selector: 'app-table-of-contents',
-  standalone: true,
   templateUrl: './table-of-contents.component.html',
   styleUrls: ['./table-of-contents.component.scss'],
   imports: [NgForOf, AsyncPipe, NgClass],

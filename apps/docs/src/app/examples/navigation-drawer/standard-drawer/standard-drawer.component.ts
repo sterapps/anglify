@@ -10,7 +10,6 @@ import {
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './standard-drawer.component.html',
   styleUrls: ['./standard-drawer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

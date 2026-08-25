@@ -2,7 +2,6 @@ import {
   AutocompleteComponent,
   ButtonComponent,
   ChipComponent,
-  ClickStopPropagationDirective,
   IconComponent,
   ListItemComponent,
   ListItemTitleComponent,
@@ -14,7 +13,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { top10Movies } from '../../examples';
 
 @Component({
-  standalone: true,
   imports: [
     CommonModule,
     AutocompleteComponent,
@@ -24,7 +22,6 @@ import { top10Movies } from '../../examples';
     ChipComponent,
     IconComponent,
     ButtonComponent,
-    ClickStopPropagationDirective,
   ],
   templateUrl: './no-data-with-chips.component.html',
   styleUrls: ['./no-data-with-chips.component.scss'],

@@ -8,7 +8,6 @@ const checkboxIcons: CheckboxIcons = {
 };
 
 @Component({
-  standalone: true,
   templateUrl: './custom-icons.component.html',
   styleUrls: ['./custom-icons.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

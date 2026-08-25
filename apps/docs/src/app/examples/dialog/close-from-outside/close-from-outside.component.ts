@@ -18,7 +18,6 @@ import { Subject, takeUntil } from 'rxjs';
 export class DialogTestComponent {}
 
 @Component({
-  standalone: true,
   imports: [ButtonComponent],
   templateUrl: './close-from-outside.component.html',
   styleUrls: ['./close-from-outside.component.scss'],

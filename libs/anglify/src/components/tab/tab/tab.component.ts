@@ -1,4 +1,3 @@
-import { AsyncPipe, NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -30,12 +29,11 @@ import { EntireTabSettings } from './tab.interface';
 @UntilDestroy()
 @Component({
   selector: 'anglify-tab',
-  standalone: true,
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [createSettingsProvider<EntireTabSettings>('anglifyTabSettings', DEFAULT_TAB_SETTINGS, TAB_SETTINGS), RIPPLE],
-  imports: [AsyncPipe, FindSlotPipe, NgIf, SlotOutletDirective],
+  imports: [FindSlotPipe, SlotOutletDirective],
 })
 export class TabComponent implements EntireTabSettings {
   @ContentChildren(SlotDirective) protected readonly slots?: QueryList<SlotDirective>;

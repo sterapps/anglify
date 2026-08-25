@@ -1,11 +1,10 @@
-import { CheckboxComponent, DividerComponent, SlotDirective } from '@anglify/components';
-import { CommonModule, NgIf } from '@angular/common';
+import { CheckboxComponent, DividerComponent } from '@anglify/components';
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, CheckboxComponent, SlotDirective, FormsModule, NgIf, DividerComponent],
+  imports: [CommonModule, CheckboxComponent, FormsModule, DividerComponent],
   templateUrl: './divider-playground.component.html',
   styleUrls: ['./divider-playground.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

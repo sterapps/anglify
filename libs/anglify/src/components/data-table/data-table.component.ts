@@ -24,7 +24,6 @@ import { ButtonComponent } from '../button/button.component';
 import { CheckboxComponent } from '../checkbox/checkbox.component';
 import { IconComponent } from '../icon/icon.component';
 import { InternalIconSetDefinition } from '../icon/icon.interface';
-import { ListComponent } from '../list/list/list.component';
 import { ListItemComponent } from '../list/list-item/list-item.component';
 import { ListItemTitleComponent } from '../list/list-item-title/list-item-title.component';
 import { MenuComponent } from '../menu/menu.component';
@@ -42,7 +41,6 @@ import { SelectionService } from './services/selection.service';
 @UntilDestroy()
 @Component({
   selector: 'anglify-data-table',
-  standalone: true,
   templateUrl: './data-table.component.html',
   styleUrls: ['./data-table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -67,7 +65,6 @@ import { SelectionService } from './services/selection.service';
     ButtonComponent,
     ProgressLinearComponent,
     ListItemComponent,
-    ListComponent,
     ListItemTitleComponent,
     MenuComponent,
     SlotDirective,

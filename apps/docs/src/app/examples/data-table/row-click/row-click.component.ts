@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   imports: [DataTableComponent],
   templateUrl: './row-click.component.html',
   styleUrls: ['./row-click.component.scss'],

@@ -2,7 +2,6 @@ import { ToolbarComponent, ButtonComponent, IconComponent, TabGroupComponent, Ta
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './extended.component.html',
   styleUrls: ['./extended.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

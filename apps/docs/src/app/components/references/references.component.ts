@@ -3,7 +3,6 @@ import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './references.component.html',
   styleUrls: ['./references.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

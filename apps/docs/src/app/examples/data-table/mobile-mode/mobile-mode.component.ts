@@ -5,7 +5,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   imports: [DataTableComponent, AsyncPipe],
   templateUrl: './mobile-mode.component.html',
   styleUrls: ['./mobile-mode.component.scss'],

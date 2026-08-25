@@ -2,7 +2,6 @@ import { IconComponent, SlotDirective, TabComponent, TabGroupComponent } from '@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './icon-left.component.html',
   styleUrls: ['./icon-left.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

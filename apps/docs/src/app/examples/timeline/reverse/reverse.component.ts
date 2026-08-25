@@ -2,7 +2,6 @@ import { IconComponent, SlotDirective, TimelineComponent, TimelineItemComponent 
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './reverse.component.html',
   styleUrls: ['./reverse.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

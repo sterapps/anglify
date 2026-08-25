@@ -13,7 +13,6 @@ export type Release = {
 };
 
 @Component({
-  standalone: true,
   imports: [NgForOf, ChipComponent, AsyncPipe, NgIf, MarkdownPipe],
   templateUrl: './release-notes.component.html',
   styleUrls: ['./release-notes.component.scss'],

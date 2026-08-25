@@ -3,7 +3,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { items } from '../data';
 
 @Component({
-  standalone: true,
   templateUrl: './expandable-rows.component.html',
   styleUrls: ['./expandable-rows.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

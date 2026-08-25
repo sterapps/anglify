@@ -35,7 +35,6 @@ import { CHECKBOX_ICONS_FACTORY } from './tokens/checkbox-icons.token';
 @UntilDestroy()
 @Component({
   selector: 'anglify-checkbox',
-  standalone: true,
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss'],
   providers: [

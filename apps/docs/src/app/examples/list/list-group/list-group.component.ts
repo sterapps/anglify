@@ -10,7 +10,6 @@ import {
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './list-group.component.html',
   styleUrls: ['./list-group.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

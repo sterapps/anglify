@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   imports: [CommonModule, DividerComponent, ToolbarComponent, IconComponent, ButtonComponent, SlotDirective],
   templateUrl: './vertical.component.html',
   styleUrls: ['./vertical.component.scss'],

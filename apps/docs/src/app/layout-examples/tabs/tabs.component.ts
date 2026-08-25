@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { environment } from 'apps/docs/src/environments/environment';
 
 @Component({
-  standalone: true,
   imports: [ToolbarComponent, SlotDirective, TabGroupComponent, TabComponent, ButtonComponent, IconComponent, RouterModule],
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss'],

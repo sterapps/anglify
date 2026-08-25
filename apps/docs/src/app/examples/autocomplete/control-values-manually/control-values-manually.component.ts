@@ -1,11 +1,10 @@
-import { AutocompleteComponent, ButtonComponent, SlotDirective } from '@anglify/components';
+import { AutocompleteComponent, ButtonComponent } from '@anglify/components';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { top10Movies } from '../../examples';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, AutocompleteComponent, SlotDirective, ButtonComponent],
+  imports: [CommonModule, AutocompleteComponent, ButtonComponent],
   templateUrl: './control-values-manually.component.html',
   styleUrls: ['./control-values-manually.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -6,7 +6,6 @@ import { ModifierType, type InjectableDocumentation } from '../../app.interface'
 
 @Component({
   selector: 'app-service-api',
-  standalone: true,
   templateUrl: './service-api.component.html',
   styleUrls: ['./service-api.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

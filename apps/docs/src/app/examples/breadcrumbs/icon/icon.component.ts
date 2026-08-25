@@ -2,7 +2,6 @@ import { BreadcrumbsComponent, type BreadCrumb, IconComponent as AnglifyIconComp
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

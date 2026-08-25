@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { interval, map } from 'rxjs';
 
 @Component({
-  standalone: true,
   templateUrl: './rotation.component.html',
   styleUrls: ['./rotation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
