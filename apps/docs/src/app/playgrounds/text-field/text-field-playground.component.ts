@@ -7,12 +7,11 @@ import {
   SlotDirective,
   TextFieldComponent,
 } from '@anglify/components';
-import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  imports: [TextFieldComponent, InputDirective, CheckboxComponent, SlotDirective, RadioButtonComponent, FormsModule, IconComponent, NgIf],
+  imports: [TextFieldComponent, InputDirective, CheckboxComponent, SlotDirective, RadioButtonComponent, FormsModule, IconComponent],
   templateUrl: './text-field-playground.component.html',
   styleUrls: ['./text-field-playground.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

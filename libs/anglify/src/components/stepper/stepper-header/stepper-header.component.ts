@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -27,7 +27,7 @@ import { StepperService } from '../stepper.service';
   styleUrls: ['./stepper-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [RIPPLE],
-  imports: [NgIf, AsyncPipe, SlotOutletDirective, FindSlotPipe],
+  imports: [AsyncPipe, SlotOutletDirective, FindSlotPipe],
 })
 export class StepperHeaderComponent {
   @ContentChildren(SlotDirective) protected readonly slots!: QueryList<SlotDirective>;

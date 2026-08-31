@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="25 25 50 50" [style]="style">
-  <circle *ngIf="indeterminate === false" class="track" cx="50" cy="50" r="20"></circle>
+  @if (indeterminate === false) {
+    <circle class="track" cx="50" cy="50" r="20"></circle>
+  }
   <circle
     class="overlay"
     cx="50"

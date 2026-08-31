@@ -43,7 +43,10 @@ export class RippleService {
 
   private readonly backgroundContainer;
 
-  public constructor(private readonly elementRef: ElementRef<HTMLElement>, private readonly renderer: Renderer2) {
+  public constructor(
+    private readonly elementRef: ElementRef<HTMLElement>,
+    private readonly renderer: Renderer2
+  ) {
     this.elementRef.nativeElement.classList.add('anglify-state');
     this.showRippleHandler$.pipe(untilDestroyed(this)).subscribe();
     this.hideRippleHandler$.pipe(untilDestroyed(this)).subscribe();

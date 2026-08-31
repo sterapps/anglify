@@ -1,4 +1,4 @@
-import { AsyncPipe, NgForOf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -27,7 +27,7 @@ import { EntireItemGroupSettings } from './item-group.interface';
   providers: [
     createSettingsProvider<EntireItemGroupSettings>('anglifyItemGroupSettings', DEFAULT_ITEM_GROUP_SETTINGS, ITEM_GROUP_SETTINGS),
   ],
-  imports: [NgForOf, AsyncPipe, SlotOutletDirective],
+  imports: [AsyncPipe, SlotOutletDirective],
 })
 export class ItemGroupComponent implements AfterViewInit {
   @ContentChildren(SlotDirective, { descendants: true }) private readonly allSlots?: QueryList<SlotDirective<boolean>>;

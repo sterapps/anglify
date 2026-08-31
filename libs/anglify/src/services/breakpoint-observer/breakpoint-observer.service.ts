@@ -47,8 +47,7 @@ export class BreakpointObserverService {
 
   private computeScreenSize(): Breakpoint {
     const matched = Object.entries(this.breakpoints).find(([, value]) => window.matchMedia(`(min-width: ${value}px)`).matches) as
-      | [Breakpoint, number]
-      | undefined;
+      [Breakpoint, number] | undefined;
     return matched ? matched[0] : 'xs';
   }
 

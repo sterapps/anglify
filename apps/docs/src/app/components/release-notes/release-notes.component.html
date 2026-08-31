@@ -1,11 +1,13 @@
-<ng-container *ngFor="let release of releases$ | async">
+@for (release of releases$ | async; track release) {
   <div class="release">
     <div class="header">
       <h2>
         <a [href]="release.html_url" target="_blank" rel="noopener noreferrer">{{ release.tag_name }}</a>
       </h2>
-      <anglify-chip *ngIf="release.prerelease" appearance="outlined">Pre-release</anglify-chip>
+      @if (release.prerelease) {
+        <anglify-chip appearance="outlined">Pre-release</anglify-chip>
+      }
     </div>
     <div [innerHTML]="release.body | markdown | async"></div>
   </div>
-</ng-container>
+}

@@ -4,6 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/kitchensink/src",
   "prefix": "app",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -62,7 +63,8 @@
           "buildTarget": "kitchensink:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -77,9 +79,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/kitchensink"],
       "options": {
-        "jestConfig": "apps/kitchensink/jest.config.ts"
+        "jestConfig": "apps/kitchensink/jest.config.ts",
+        "tsConfig": "apps/kitchensink/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

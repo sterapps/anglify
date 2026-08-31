@@ -1,12 +1,11 @@
 import { SimpleTableComponent } from '@anglify/components';
-import { NgForOf } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   templateUrl: './normal.component.html',
   styleUrls: ['./normal.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SimpleTableComponent, NgForOf],
+  imports: [SimpleTableComponent],
 })
 export default class NormalComponent {
   public readonly desserts = [

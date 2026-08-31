@@ -4,20 +4,20 @@
   "projectType": "library",
   "sourceRoot": "libs/anglify/src",
   "prefix": "anglify",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/libs/anglify"],
       "options": {
-        "project": "libs/anglify/ng-package.json"
+        "project": "libs/anglify/ng-package.json",
+        "tsConfig": "libs/anglify/tsconfig.lib.json"
       },
       "configurations": {
         "production": {
           "tsConfig": "libs/anglify/tsconfig.lib.prod.json"
         },
-        "development": {
-          "tsConfig": "libs/anglify/tsconfig.lib.json"
-        }
+        "development": {}
       },
       "defaultConfiguration": "production"
     },
@@ -25,12 +25,12 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/anglify"],
       "options": {
-        "jestConfig": "libs/anglify/jest.config.ts"
+        "jestConfig": "libs/anglify/jest.config.ts",
+        "tsConfig": "libs/anglify/tsconfig.spec.json"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint"
     }
-  },
-  "tags": []
+  }
 }

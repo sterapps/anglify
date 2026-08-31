@@ -1,12 +1,11 @@
 import { ChipComponent, IconComponent, SlotDirective } from '@anglify/components';
-import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   templateUrl: './references.component.html',
   styleUrls: ['./references.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ChipComponent, IconComponent, SlotDirective, NgIf],
+  imports: [ChipComponent, IconComponent, SlotDirective],
 })
 export class ReferencesComponent {
   @Input() public issues?: string;

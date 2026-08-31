@@ -3,7 +3,9 @@ $progress-circular-track-color: var(--anglify-progress-circular-track-color, var
 $progress-circular-stroke-width: var(--anglify-progress-circular-stroke-width, 4px) !default;
 $progress-circular-stroke-start-dasharray: var(--anglify-progress-circular-stroke-start-dasharray, 1, 200) !default;
 $progress-circular-stroke-end-dasharray: var(--anglify-progress-circular-stroke-end-dasharray, 89, 200) !default;
-$progress-circular-overlay-transition: stroke-dasharray 0.6s ease-in-out, stroke-dashoffset 0.6s ease-in-out !default;
+$progress-circular-overlay-transition:
+  stroke-dasharray 0.6s ease-in-out,
+  stroke-dashoffset 0.6s ease-in-out !default;
 $progress-circular-indeterminate-rotation-animation-speed: var(
   --anglify-progress-circular-indeterminate-rotation-animation-speed,
   1.4s

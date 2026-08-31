@@ -1,5 +1,5 @@
 import { SimpleTableComponent } from '@anglify/components';
-import { NgIf, AsyncPipe, NgForOf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import { ModifierType, type ComponentDocumentation } from '../../app.interface';
@@ -9,7 +9,7 @@ import { ModifierType, type ComponentDocumentation } from '../../app.interface';
   templateUrl: './component-api.component.html',
   styleUrls: ['./component-api.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf, SimpleTableComponent, AsyncPipe, NgForOf],
+  imports: [SimpleTableComponent, AsyncPipe],
 })
 export class ComponentAPIComponent {
   public get documentation() {

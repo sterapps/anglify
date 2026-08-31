@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ContentChildren, Inject, Input, QueryList, Self, type AfterViewInit } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { BehaviorSubject, map, startWith, Subject, takeUntil, tap } from 'rxjs';
@@ -21,7 +21,7 @@ import { EntireListGroupSettings } from './list-group.interface';
   styleUrls: ['./list-group.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [rotate(), fastInFastOutY()],
-  imports: [ListItemComponent, IconComponent, NgIf, AsyncPipe, FindSlotPipe, SlotOutletDirective, SlotDirective],
+  imports: [ListItemComponent, IconComponent, AsyncPipe, FindSlotPipe, SlotOutletDirective, SlotDirective],
   providers: [
     createSettingsProvider<EntireListGroupSettings>('anglifyListGroupSettings', DEFAULT_LIST_GROUP_SETTINGS, LIST_GROUP_SETTINGS),
   ],

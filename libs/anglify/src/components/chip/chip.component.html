@@ -1,10 +1,16 @@
-<div *ngIf="!(slots | findSlot : 'prepend') && filter" class="prepend">
-  <anglify-icon [icon]="internalIcons.check"></anglify-icon>
-</div>
-<div *ngIf="slots | findSlot : 'prepend'" class="prepend">
-  <ng-container *anglifySlotOutlet="slots | findSlot : 'prepend'"></ng-container>
-</div>
+@if (!(slots | findSlot: 'prepend') && filter) {
+  <div class="prepend">
+    <anglify-icon [icon]="internalIcons.check"></anglify-icon>
+  </div>
+}
+@if (slots | findSlot: 'prepend') {
+  <div class="prepend">
+    <ng-container *anglifySlotOutlet="slots | findSlot: 'prepend'"></ng-container>
+  </div>
+}
 <ng-content></ng-content>
-<div *ngIf="slots | findSlot : 'append'" class="append">
-  <ng-container *anglifySlotOutlet="slots | findSlot : 'append'"></ng-container>
-</div>
+@if (slots | findSlot: 'append') {
+  <div class="append">
+    <ng-container *anglifySlotOutlet="slots | findSlot: 'append'"></ng-container>
+  </div>
+}

@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostBinding, Inject, Input, Self } from '@angular/core';
 import { createSettingsProvider } from '../../factories/settings.factory';
 import { ClampPipe } from '../../pipes/clamp/clamp.pipe';
@@ -19,7 +18,7 @@ import { EntireProgressLinearSettings } from './progress-linear.interface';
       PROGRESS_LINEAR_SETTINGS
     ),
   ],
-  imports: [ClampPipe, PercentPipe, NgIf],
+  imports: [ClampPipe, PercentPipe],
 })
 export class ProgressLinearComponent implements EntireProgressLinearSettings {
   @Input() public active = this.settings.active;

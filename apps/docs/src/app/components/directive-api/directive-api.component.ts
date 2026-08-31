@@ -1,5 +1,5 @@
 import { SimpleTableComponent } from '@anglify/components';
-import { NgIf, AsyncPipe, NgForOf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import { ModifierType, type DirectiveDocumentation } from '../../app.interface';
@@ -9,7 +9,7 @@ import { ModifierType, type DirectiveDocumentation } from '../../app.interface';
   templateUrl: './directive-api.component.html',
   styleUrls: ['./directive-api.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf, SimpleTableComponent, AsyncPipe, NgForOf],
+  imports: [SimpleTableComponent, AsyncPipe],
 })
 export class DirectiveAPIComponent {
   public get documentation() {

@@ -1,23 +1,24 @@
-<ng-container *ngIf="otp$ | async as otp">
-  <input
-    #input
-    *ngFor="let i of lengthArray$ | async"
-    [value]="otp[i] || ''"
-    [id]="id + '-' + i"
-    maxlength="1"
-    [disabled]="disabled"
-    [readonly]="readonly"
-    autocomplete="one-time-code"
-    autocapitalize="off"
-    spellcheck="false"
-    [type]="hiddenInput ? 'password' : 'text'"
-    (blur)="onBlurHandler($event)"
-    (input)="onInputHandler($event, i)"
-    (focus)="onFocusHandler($event, i)"
-    (paste)="onPasteHandler($event, i)"
-    (keyup)="onKeyUpHandler($event, i)"
-    [ngClass]="{
-      'anglify-otp-input-focused': (isFocused$ | async) && disabled === false
-    }"
-  />
-</ng-container>
+@if (otp$ | async; as otp) {
+  @for (i of lengthArray$ | async; track i) {
+    <input
+      #input
+      [value]="otp[i] || ''"
+      [id]="id + '-' + i"
+      maxlength="1"
+      [disabled]="disabled"
+      [readonly]="readonly"
+      autocomplete="one-time-code"
+      autocapitalize="off"
+      spellcheck="false"
+      [type]="hiddenInput ? 'password' : 'text'"
+      (blur)="onBlurHandler($event)"
+      (input)="onInputHandler($event, i)"
+      (focus)="onFocusHandler($event, i)"
+      (paste)="onPasteHandler($event, i)"
+      (keyup)="onKeyUpHandler($event, i)"
+      [ngClass]="{
+        'anglify-otp-input-focused': (isFocused$ | async) && disabled === false,
+      }"
+    />
+  }
+}

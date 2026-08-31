@@ -1,4 +1,6 @@
 <ng-content></ng-content>
-<div *ngIf="value" class="badge">
-  <ng-container *anglifySlotOutlet="slots | findSlot : 'content'">{{ content }}</ng-container>
-</div>
+@if (value) {
+  <div class="badge">
+    <ng-container *anglifySlotOutlet="slots | findSlot: 'content'">{{ content }}</ng-container>
+  </div>
+}

@@ -1,10 +1,9 @@
 import { AutocompleteComponent, ChipComponent, SlotDirective } from '@anglify/components';
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { top10Movies } from '../../examples';
 
 @Component({
-  imports: [CommonModule, AutocompleteComponent, SlotDirective, ChipComponent],
+  imports: [AutocompleteComponent, SlotDirective, ChipComponent],
   templateUrl: './chips.component.html',
   styleUrls: ['./chips.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

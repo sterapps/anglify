@@ -13,7 +13,10 @@ export class MarkdownPipe implements PipeTransform {
     return this.parseMarkdown(markdown);
   }
 
-  public constructor(private readonly domSanitizer: DomSanitizer, private readonly highlightPipe: HighlightPipe) {}
+  public constructor(
+    private readonly domSanitizer: DomSanitizer,
+    private readonly highlightPipe: HighlightPipe
+  ) {}
 
   public parseMarkdown(markdownString: string) {
     return of(

@@ -1,20 +1,30 @@
 <anglify-item-group [mandatory]="true" [value]="(selection$ | async) ?? []" (valueChange)="selection$.next($event)">
-  <ng-template *ngFor="let c of selectables$ | async" slot="item-group-item" let-active="active" let-toggle>
-    <anglify-chip [active]="active" (click)="toggle()">{{ c }}</anglify-chip>
-  </ng-template>
+  @for (c of selectables$ | async; track c) {
+    <ng-template slot="item-group-item" let-active="active" let-toggle>
+      <anglify-chip [active]="active" (click)="toggle()">{{ c }}</anglify-chip>
+    </ng-template>
+  }
 </anglify-item-group>
 
-<ng-container *ngIf="selectedName$ | async as selection">
-  <ng-container *ngFor="let component of components$ | async">
-    <app-component-api *ngIf="component.name === selection" [documentation]="component"></app-component-api>
-  </ng-container>
-  <ng-container *ngFor="let service of services$ | async">
-    <app-service-api *ngIf="service.name === selection" [documentation]="service"></app-service-api>
-  </ng-container>
-  <ng-container *ngFor="let directive of directives$ | async">
-    <app-directive-api *ngIf="directive.name === selection" [documentation]="directive"></app-directive-api>
-  </ng-container>
-  <ng-container *ngFor="let interface of interfaces$ | async">
-    <app-interface-api *ngIf="interface.name === selection" [documentation]="interface"></app-interface-api>
-  </ng-container>
-</ng-container>
+@if (selectedName$ | async; as selection) {
+  @for (component of components$ | async; track component) {
+    @if (component.name === selection) {
+      <app-component-api [documentation]="component"></app-component-api>
+    }
+  }
+  @for (service of services$ | async; track service) {
+    @if (service.name === selection) {
+      <app-service-api [documentation]="service"></app-service-api>
+    }
+  }
+  @for (directive of directives$ | async; track directive) {
+    @if (directive.name === selection) {
+      <app-directive-api [documentation]="directive"></app-directive-api>
+    }
+  }
+  @for (interface of interfaces$ | async; track interface) {
+    @if (interface.name === selection) {
+      <app-interface-api [documentation]="interface"></app-interface-api>
+    }
+  }
+}

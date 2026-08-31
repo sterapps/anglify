@@ -53,37 +53,51 @@
 >
   <anglify-list [dense]="true" [nav]="true">
     <anglify-list-item-group [mandatory]="true">
-      <ng-container *ngFor="let itemOrGroup of navigationTree">
-        <anglify-list-item *ngIf="itemOrGroup.type === 'item'" [routerLink]="itemOrGroup.link">
-          <anglify-list-item-title>{{ itemOrGroup.name }}</anglify-list-item-title>
-        </anglify-list-item>
-        <anglify-list-group *ngIf="itemOrGroup.type === 'group'">
-          <ng-template *ngIf="itemOrGroup.icon" slot="activator:prepend">
-            <anglify-icon [icon]="itemOrGroup.icon"></anglify-icon>
-          </ng-template>
-          <ng-template slot="activator">
+      @for (itemOrGroup of navigationTree; track itemOrGroup) {
+        @if (itemOrGroup.type === 'item') {
+          <anglify-list-item [routerLink]="itemOrGroup.link">
             <anglify-list-item-title>{{ itemOrGroup.name }}</anglify-list-item-title>
-          </ng-template>
-          <ng-container *ngFor="let item of itemOrGroup.items">
-            <anglify-list-item *ngIf="item.type === 'item'" [routerLink]="item.link">
-              <anglify-list-item-title>{{ item.name }}</anglify-list-item-title>
-            </anglify-list-item>
-            <anglify-list-group *ngIf="item.type === 'group'">
-              <ng-template *ngIf="item.icon" slot="activator:prepend">
-                <anglify-icon [icon]="item.icon"></anglify-icon>
+          </anglify-list-item>
+        }
+        @if (itemOrGroup.type === 'group') {
+          <anglify-list-group>
+            @if (itemOrGroup.icon) {
+              <ng-template slot="activator:prepend">
+                <anglify-icon [icon]="itemOrGroup.icon"></anglify-icon>
               </ng-template>
-              <ng-template slot="activator">
-                <anglify-list-item-title>{{ item.name }}</anglify-list-item-title>
-              </ng-template>
-              <ng-container *ngFor="let item2 of item.items">
-                <anglify-list-item *ngIf="item2.type === 'item'" [routerLink]="item2.link">
-                  <anglify-list-item-title>{{ item2.name }}</anglify-list-item-title>
+            }
+            <ng-template slot="activator">
+              <anglify-list-item-title>{{ itemOrGroup.name }}</anglify-list-item-title>
+            </ng-template>
+            @for (item of itemOrGroup.items; track item) {
+              @if (item.type === 'item') {
+                <anglify-list-item [routerLink]="item.link">
+                  <anglify-list-item-title>{{ item.name }}</anglify-list-item-title>
                 </anglify-list-item>
-              </ng-container>
-            </anglify-list-group>
-          </ng-container>
-        </anglify-list-group>
-      </ng-container>
+              }
+              @if (item.type === 'group') {
+                <anglify-list-group>
+                  @if (item.icon) {
+                    <ng-template slot="activator:prepend">
+                      <anglify-icon [icon]="item.icon"></anglify-icon>
+                    </ng-template>
+                  }
+                  <ng-template slot="activator">
+                    <anglify-list-item-title>{{ item.name }}</anglify-list-item-title>
+                  </ng-template>
+                  @for (item2 of item.items; track item2) {
+                    @if (item2.type === 'item') {
+                      <anglify-list-item [routerLink]="item2.link">
+                        <anglify-list-item-title>{{ item2.name }}</anglify-list-item-title>
+                      </anglify-list-item>
+                    }
+                  }
+                </anglify-list-group>
+              }
+            }
+          </anglify-list-group>
+        }
+      }
     </anglify-list-item-group>
   </anglify-list>
 </anglify-navigation-drawer>

@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -36,7 +36,7 @@ import { EntireListItemSettings } from './list-item.interface';
     createSettingsProvider<EntireListItemSettings>('anglifyListItemSettings', DEFAULT_LIST_ITEM_SETTINGS, LIST_ITEM_SETTINGS),
     RIPPLE,
   ],
-  imports: [FindSlotPipe, NgIf, SlotOutletDirective, FindSlotPipe, AsyncPipe],
+  imports: [FindSlotPipe, SlotOutletDirective, FindSlotPipe, AsyncPipe],
 })
 export class ListItemComponent implements EntireListItemSettings {
   @ContentChildren(SlotDirective) protected readonly slots?: QueryList<SlotDirective>;

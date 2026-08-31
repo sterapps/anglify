@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -33,7 +32,7 @@ import { ChipAppearance, EntireChipSettings } from './chip.interface';
   styleUrls: ['./chip.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [createSettingsProvider<EntireChipSettings>('anglifyChipSettings', DEFAULT_CHIP_SETTINGS, CHIP_SETTINGS), RIPPLE],
-  imports: [IconComponent, NgIf, FindSlotPipe, SlotOutletDirective],
+  imports: [IconComponent, FindSlotPipe, SlotOutletDirective],
 })
 export class ChipComponent implements EntireChipSettings, OnInit {
   @ContentChildren(SlotDirective) protected readonly slots?: QueryList<SlotDirective>;

@@ -12,7 +12,7 @@ import {
   ToolbarComponent,
   TooltipDirective,
 } from '@anglify/components';
-import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import type { EmbeddedViewRef } from '@angular/core';
 import { ChangeDetectionStrategy, Component, ElementRef, Renderer2, ViewChild, ViewContainerRef } from '@angular/core';
@@ -55,8 +55,6 @@ type NavGroup = {
     ListItemComponent,
     ListItemTitleComponent,
     TooltipDirective,
-    NgForOf,
-    NgIf,
     AsyncPipe,
     RouterModule,
     SlotDirective,

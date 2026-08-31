@@ -1,5 +1,5 @@
 /* eslint-disable @angular-eslint/no-output-native */
-import { AsyncPipe, NgClass, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe, NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -31,7 +31,7 @@ import { EntireOTPInputSettings } from './otp-input.interface';
     createSettingsProvider<EntireOTPInputSettings>('anglifyOTPInputSettings', DEFAULT_OTP_INPUT_SETTINGS, OTP_INPUT_SETTINGS),
     { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => OtpInputComponent), multi: true },
   ],
-  imports: [NgForOf, NgIf, AsyncPipe, NgClass],
+  imports: [AsyncPipe, NgClass],
 })
 export class OtpInputComponent implements EntireOTPInputSettings, ControlValueAccessor {
   @ViewChildren('input') private readonly inputRefs?: QueryList<ElementRef<HTMLInputElement>>;

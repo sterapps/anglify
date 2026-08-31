@@ -4,6 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/docs/src",
   "prefix": "anglify",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -17,7 +18,8 @@
         "inlineStyleLanguage": "scss",
         "assets": ["apps/docs/src/favicon.ico", "apps/docs/src/assets", "apps/docs/src/robots.txt"],
         "styles": ["apps/docs/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "allowedCommonJsDependencies": ["prismjs", "safevalues"]
       },
       "configurations": {
         "production": {
@@ -83,7 +85,8 @@
           "buildTarget": "docs:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -98,9 +101,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/docs"],
       "options": {
-        "jestConfig": "apps/docs/jest.config.ts"
+        "jestConfig": "apps/docs/jest.config.ts",
+        "tsConfig": "apps/docs/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }

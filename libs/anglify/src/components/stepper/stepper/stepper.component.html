@@ -1,5 +1,5 @@
 <div class="anglify-stepper">
-  <ng-container *ngFor="let step of steps$ | async; let index = index">
+  @for (step of steps$ | async; track step; let index = $index) {
     <anglify-stepper-header
       [index]="index"
       [isFirst]="(step.isFirstStep$ | async) ?? true"
@@ -9,41 +9,42 @@
       [visited]="(step.visited$ | async) ?? false"
     >
       <ng-template slot="visitedIcon">
-        <ng-container *anglifySlotOutlet="slots | findSlot : 'visitedIcon'">
+        <ng-container *anglifySlotOutlet="slots | findSlot: 'visitedIcon'">
           <anglify-icon [icon]="internalIcons.edit"></anglify-icon>
         </ng-container>
       </ng-template>
     </anglify-stepper-header>
-
-    <div *ngIf="(stepperSettings.orientation$ | async) === 'vertical'" class="steps">
-      <div
-        *ngIf="step.selected$ | async"
-        class="step-container"
-        [@fast-in-fast-out-y]="selectedIndex$ | async"
-        [@.disabled]="disableAnimations"
-      >
-        <ng-container [ngTemplateOutlet]="stepContainer" [ngTemplateOutletContext]="{ $implicit: step }"></ng-container>
+    @if ((stepperSettings.orientation$ | async) === 'vertical') {
+      <div class="steps">
+        @if (step.selected$ | async) {
+          <div class="step-container" [@fast-in-fast-out-y]="selectedIndex$ | async" [@.disabled]="disableAnimations">
+            <ng-container [ngTemplateOutlet]="stepContainer" [ngTemplateOutletContext]="{ $implicit: step }"></ng-container>
+          </div>
+        }
       </div>
-    </div>
-  </ng-container>
+    }
+  }
 </div>
 
-<div
-  *ngIf="(stepperSettings.orientation$ | async) === 'horizontal'"
-  class="steps"
-  [@slide]="selectedIndex$ | async"
-  [@.disabled]="disableAnimations"
->
-  <ng-container *ngFor="let step of steps$ | async; let index = index">
-    <div *ngIf="step.selected$ | async" class="step-container">
-      <ng-container [ngTemplateOutlet]="stepContainer" [ngTemplateOutletContext]="{ $implicit: step }"></ng-container>
-    </div>
-  </ng-container>
-</div>
-<ng-template #stepContainer let-step>
-  <div *ngIf="stepperSettings.hasStepConnectionLine$ | async" class="line-container">
-    <div *ngIf="(step.isLastStep$ | async) === false" class="line"></div>
+@if ((stepperSettings.orientation$ | async) === 'horizontal') {
+  <div class="steps" [@slide]="selectedIndex$ | async" [@.disabled]="disableAnimations">
+    @for (step of steps$ | async; track step; let index = $index) {
+      @if (step.selected$ | async) {
+        <div class="step-container">
+          <ng-container [ngTemplateOutlet]="stepContainer" [ngTemplateOutletContext]="{ $implicit: step }"></ng-container>
+        </div>
+      }
+    }
   </div>
+}
+<ng-template #stepContainer let-step>
+  @if (stepperSettings.hasStepConnectionLine$ | async) {
+    <div class="line-container">
+      @if ((step.isLastStep$ | async) === false) {
+        <div class="line"></div>
+      }
+    </div>
+  }
   <div class="content">
     <ng-container [ngTemplateOutlet]="step.template" [ngTemplateOutletInjector]="stepInjector"></ng-container>
   </div>

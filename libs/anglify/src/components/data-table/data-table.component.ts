@@ -1,4 +1,4 @@
-import { AsyncPipe, NgClass, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe, NgClass } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -52,8 +52,6 @@ import { SelectionService } from './services/selection.service';
     createSettingsProvider<EntireDataTableSettings>('anglifyDataTableSettings', DEFAULT_DATA_TABLE_SETTINGS, DATA_TABLE_SETTINGS),
   ],
   imports: [
-    NgIf,
-    NgForOf,
     CheckboxComponent,
     SelectComponent,
     AsyncPipe,
@@ -262,8 +260,6 @@ export class DataTableComponent implements EntireDataTableSettings {
   }
 
   protected readonly trackByFn = (index: number, item: DataTableItem) => item[this.itemKey$.value] || index;
-
-  protected readonly headerTrackByFn = (index: number) => index;
 
   protected onRowClick(item: DataTableItem, index: number) {
     this.expansionService.expand(index);

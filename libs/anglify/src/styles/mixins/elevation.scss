@@ -10,7 +10,9 @@
     $z3: $z1;
   }
 
-  box-shadow: map.get($shadow-key-umbra, $z1), map.get($shadow-key-penumbra, $z2),
+  box-shadow:
+    map.get($shadow-key-umbra, $z1),
+    map.get($shadow-key-penumbra, $z2),
     map.get($shadow-key-ambient, $z3) if($important, !important, null);
 }
 

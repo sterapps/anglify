@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -44,7 +44,7 @@ import { EntireExpansionPanelSettings } from './expansion-panel.interface';
     ),
   ],
   animations: [fastInFastOutY(), rotate()],
-  imports: [NgIf, IconComponent, AsyncPipe, SlotOutletDirective, FindSlotPipe, InteractionStateDirective],
+  imports: [IconComponent, AsyncPipe, SlotOutletDirective, FindSlotPipe, InteractionStateDirective],
 })
 export class ExpansionPanelComponent implements EntireExpansionPanelSettings {
   @ContentChildren(SlotDirective) protected readonly slots?: QueryList<SlotDirective>;

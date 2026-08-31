@@ -1,5 +1,5 @@
 import { ButtonComponent, CardComponent, IconComponent, ItemGroupComponent, SlotDirective } from '@anglify/components';
-import { AsyncPipe, NgForOf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
   templateUrl: './max.component.html',
   styleUrls: ['./max.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [ItemGroupComponent, CardComponent, IconComponent, NgForOf, AsyncPipe, ButtonComponent, SlotDirective],
+  imports: [ItemGroupComponent, CardComponent, IconComponent, AsyncPipe, ButtonComponent, SlotDirective],
 })
 export default class MaxComponent {
   public items$ = new BehaviorSubject([1, 2, 3, 4]);
@@ -18,9 +18,5 @@ export default class MaxComponent {
 
   public addItem() {
     this.items$.next([...this.items$.value, this.items$.value.length + 1]);
-  }
-
-  public trackByFn(index: number) {
-    return index;
   }
 }

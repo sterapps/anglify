@@ -8,7 +8,10 @@ export class CheckboxIconRef {
 
   public readonly iconOffCompRef: ComponentRef<IconComponent>;
 
-  public constructor(public vcr: ViewContainerRef, checkboxIcons: CheckboxIcons) {
+  public constructor(
+    public vcr: ViewContainerRef,
+    checkboxIcons: CheckboxIcons
+  ) {
     this.iconOnCompRef = vcr.createComponent(IconComponent);
     this.iconOnCompRef.instance.icon = checkboxIcons.iconOnState;
     this.iconOnCompRef.instance.iconSet = checkboxIcons.iconPack ?? 'mdi';

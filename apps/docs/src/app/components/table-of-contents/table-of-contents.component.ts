@@ -1,4 +1,4 @@
-import { AsyncPipe, NgClass, NgForOf } from '@angular/common';
+import { AsyncPipe, NgClass } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TocService, type TocItem } from '../../services/toc.service';
 
@@ -6,7 +6,7 @@ import { TocService, type TocItem } from '../../services/toc.service';
   selector: 'app-table-of-contents',
   templateUrl: './table-of-contents.component.html',
   styleUrls: ['./table-of-contents.component.scss'],
-  imports: [NgForOf, AsyncPipe, NgClass],
+  imports: [AsyncPipe, NgClass],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TableOfContentsComponent {

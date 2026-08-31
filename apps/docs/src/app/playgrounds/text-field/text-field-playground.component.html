@@ -9,18 +9,26 @@
       [dense]="dense"
     >
       <ng-template slot="prepend-inner">
-        <anglify-icon *ngIf="prependIcon" icon="mdi-home"></anglify-icon>
+        @if (prependIcon) {
+          <anglify-icon icon="mdi-home"></anglify-icon>
+        }
       </ng-template>
       <ng-template slot="prepend">
-        <anglify-icon *ngIf="prependOuterIcon" icon="mdi-home"></anglify-icon>
+        @if (prependOuterIcon) {
+          <anglify-icon icon="mdi-home"></anglify-icon>
+        }
       </ng-template>
       <ng-template slot="label">{{ label }}</ng-template>
       <input anglifyInput [readonly]="readonly" [disabled]="disabled" [placeholder]="placeholder" />
       <ng-template slot="append-inner">
-        <anglify-icon *ngIf="appendIcon" icon="mdi-home"></anglify-icon>
+        @if (appendIcon) {
+          <anglify-icon icon="mdi-home"></anglify-icon>
+        }
       </ng-template>
       <ng-template slot="append">
-        <anglify-icon *ngIf="appendOuterIcon" icon="mdi-home"></anglify-icon>
+        @if (appendOuterIcon) {
+          <anglify-icon icon="mdi-home"></anglify-icon>
+        }
       </ng-template>
     </anglify-text-field>
   </div>

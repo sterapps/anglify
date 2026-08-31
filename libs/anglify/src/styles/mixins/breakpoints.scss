@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 $grid-breakpoints: (
   'xs': 0,
   'sm': 600px,
@@ -7,31 +9,31 @@ $grid-breakpoints: (
 ) !default;
 
 @mixin xs-and-up {
-  @media (min-width: #{ map-get($grid-breakpoints, xs)}) {
+  @media (min-width: #{ map.get($grid-breakpoints, xs)}) {
     @content;
   }
 }
 
 @mixin sm-and-up {
-  @media (min-width: #{ map-get($grid-breakpoints, sm)}) {
+  @media (min-width: #{ map.get($grid-breakpoints, sm)}) {
     @content;
   }
 }
 
 @mixin md-and-up {
-  @media (min-width: #{ map-get($grid-breakpoints, md)}) {
+  @media (min-width: #{ map.get($grid-breakpoints, md)}) {
     @content;
   }
 }
 
 @mixin lg-and-up {
-  @media (min-width: #{ map-get($grid-breakpoints, lg)}) {
+  @media (min-width: #{ map.get($grid-breakpoints, lg)}) {
     @content;
   }
 }
 
 @mixin xl-and-up {
-  @media (min-width: #{ map-get($grid-breakpoints, xl)}) {
+  @media (min-width: #{ map.get($grid-breakpoints, xl)}) {
     @content;
   }
 }

@@ -1,11 +1,11 @@
-<div
-  *ngIf="stream && !indeterminate"
-  class="anglify-progress-linear-stream"
-  [style.width]="100 - (bufferValue | clamp) | percentUnit"
-></div>
+@if (stream && !indeterminate) {
+  <div class="anglify-progress-linear-stream" [style.width]="100 - (bufferValue | clamp) | percentUnit"></div>
+}
 <div class="anglify-progress-linear-track" [style.width]="(indeterminate ? 100 : (bufferValue | clamp)) | percentUnit"></div>
-<div *ngIf="!indeterminate" class="anglify-progress-linear-determinate" [style.width]="value | clamp | percentUnit"></div>
-<ng-container *ngIf="indeterminate">
+@if (!indeterminate) {
+  <div class="anglify-progress-linear-determinate" [style.width]="value | clamp | percentUnit"></div>
+}
+@if (indeterminate) {
   <div class="anglify-progress-linear-indeterminate long"></div>
   <div class="anglify-progress-linear-indeterminate short"></div>
-</ng-container>
+}

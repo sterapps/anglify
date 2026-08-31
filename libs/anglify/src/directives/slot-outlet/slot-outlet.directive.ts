@@ -11,7 +11,10 @@ export class SlotOutletDirective implements OnChanges {
 
   @Input() public anglifySlotOutletContext: Record<string, unknown> | null = null;
 
-  public constructor(private readonly viewContainerRef: ViewContainerRef, private readonly templateRef: TemplateRef<any>) {}
+  public constructor(
+    private readonly viewContainerRef: ViewContainerRef,
+    private readonly templateRef: TemplateRef<any>
+  ) {}
 
   public ngOnChanges(changes: { anglifySlotOutlet?: SimpleChange; anglifySlotOutletContext?: SimpleChange }) {
     if (changes.anglifySlotOutlet) {

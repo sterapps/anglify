@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -29,7 +29,7 @@ import { InputAppearance } from './input.interface';
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [InteractionStateDirective, NgIf, TooltipDirective, AsyncPipe, FindSlotPipe, SlotOutletDirective],
+  imports: [InteractionStateDirective, TooltipDirective, AsyncPipe, FindSlotPipe, SlotOutletDirective],
 })
 export class InputComponent implements OnInit, AfterViewInit {
   @ContentChildren(SlotDirective) protected readonly slots?: QueryList<SlotDirective>;

@@ -13,7 +13,10 @@ export const SNACKBAR_CONTEXT = new InjectionToken<SnackbarContext>('Snackbar co
 export class SnackbarService {
   public readonly activeSnackbar$ = new BehaviorSubject<SnackbarContext | null>(null);
 
-  public constructor(private readonly idService: AnglifyIdService, private readonly overlayService: OverlayService) {}
+  public constructor(
+    private readonly idService: AnglifyIdService,
+    private readonly overlayService: OverlayService
+  ) {}
 
   public open(options: Partial<SnackbarOptions> = {}) {
     const subscription = this.open$(options)

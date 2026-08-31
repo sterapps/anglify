@@ -1,4 +1,4 @@
-<ng-container *ngFor="let type of typography; trackBy: trackByFn">
+@for (type of typography; track trackByFn($index, type)) {
   <div
     class="container"
     [ngClass]="type.name"
@@ -11,7 +11,9 @@
     <div>{{ type.title }}</div>
     <anglify-icon icon="mdi-chevron-down" [@rotate]="(activeTypography$ | async) === type.name"></anglify-icon>
   </div>
-  <div *ngIf="(activeTypography$ | async) === type.name" class="custom-properties" @fast-in-fast-out-y>
-    <pre><code class="language-scss" [innerHTML]="type.customProperties | highlight: 'scss'"></code></pre>
-  </div>
-</ng-container>
+  @if ((activeTypography$ | async) === type.name) {
+    <div class="custom-properties" @fast-in-fast-out-y>
+      <pre><code class="language-scss" [innerHTML]="type.customProperties | highlight: 'scss'"></code></pre>
+    </div>
+  }
+}

@@ -1,4 +1,4 @@
-import { AsyncPipe, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ContentChildren, ElementRef, Inject, Input, QueryList, Self } from '@angular/core';
 import { UntilDestroy } from '@ngneat/until-destroy';
 import { BehaviorSubject } from 'rxjs';
@@ -16,7 +16,7 @@ import { EntireTimelineItemSettings, TimelineItemAlignment } from './timeline-it
   templateUrl: './timeline-item.component.html',
   styleUrls: ['./timeline-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgIf, AsyncPipe, FindSlotPipe, SlotOutletDirective],
+  imports: [AsyncPipe, FindSlotPipe, SlotOutletDirective],
   providers: [
     createSettingsProvider<EntireTimelineItemSettings>(
       'anglifyTimelineItemSettings',

@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, Input, QueryList } from '@angular/core';
 import { focusableElementsString } from '../../../composables/position/position.interface';
 import type { SlotDirective } from '../../../directives/slot/slot.directive';
@@ -7,7 +6,7 @@ import { FindSlotPipe } from '../../../pipes/find-slot/find-slot.pipe';
 
 @Component({
   selector: 'anglify-menu-content',
-  imports: [CommonModule, SlotOutletDirective, FindSlotPipe],
+  imports: [SlotOutletDirective, FindSlotPipe],
   templateUrl: './menu-content.component.html',
   styleUrls: ['./menu-content.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostBinding, Inject, Input, Self } from '@angular/core';
 import { createSettingsProvider } from '../../factories/settings.factory';
 import { DEFAULT_PROGRESS_CIRCULAR_SETTINGS, PROGRESS_CIRCULAR_SETTINGS } from './progress-circular-settings.token';
@@ -16,7 +15,7 @@ import { EntireProgressCircularSettings } from './progress-circular.interface';
       PROGRESS_CIRCULAR_SETTINGS
     ),
   ],
-  imports: [NgIf],
+  imports: [],
 })
 export class ProgressCircularComponent implements EntireProgressCircularSettings {
   @Input() public indeterminate = this.settings.indeterminate;

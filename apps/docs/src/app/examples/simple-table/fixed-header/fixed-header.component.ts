@@ -1,12 +1,11 @@
 import { SimpleTableComponent } from '@anglify/components';
-import { NgForOf } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   templateUrl: './fixed-header.component.html',
   styleUrls: ['./fixed-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SimpleTableComponent, NgForOf],
+  imports: [SimpleTableComponent],
 })
 export default class FixedHeaderComponent {
   public readonly desserts = [

@@ -1,10 +1,9 @@
 import { ComboboxComponent } from '@anglify/components';
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { top10MovieNames, top10Movies } from '../../examples';
 
 @Component({
-  imports: [CommonModule, ComboboxComponent],
+  imports: [ComboboxComponent],
   templateUrl: './access-value.component.html',
   styleUrls: ['./access-value.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
