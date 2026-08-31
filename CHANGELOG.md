@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.51.0](https://github.com/sterapps/anglify/compare/v0.50.0...v0.51.0) (2026-08-31)
+
+
+### 🚀  Features
+
+* **core:** upgrade from Angular 18 to Angular 19 ([e9bf521](https://github.com/sterapps/anglify/commit/e9bf5212c1c1ce7df6c9e72c6d46d77633d06361))
+* **core:** upgrade from Angular 19 to Angular 20 ([41949a6](https://github.com/sterapps/anglify/commit/41949a61dde46cfc7dd68b9782fab7631de1336d))
+
 ## [0.50.0](https://github.com/sterapps/anglify/compare/v0.49.1...v0.50.0) (2026-08-12)
 
 
