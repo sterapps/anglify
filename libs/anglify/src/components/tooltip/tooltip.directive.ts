@@ -244,11 +244,11 @@ export class TooltipDirective implements OnDestroy {
 
   @HostListener('document:click', ['$event', '$event.target'])
   @HostListener('document:contextmenu', ['$event', '$event.target'])
-  public onClickOutside(_: MouseEvent, targetElement: HTMLElement) {
+  public onClickOutside(_: MouseEvent, targetElement: EventTarget | null) {
     if (this.disabled) return;
     if (!this.componentRef) return;
     if (!targetElement) return;
-    const clickedInside = this.element.nativeElement.contains(targetElement);
+    const clickedInside = this.element.nativeElement.contains(targetElement as Node);
     if (!clickedInside) this.close(0);
   }
 

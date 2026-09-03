@@ -109,6 +109,5 @@ export class ChipComponent implements EntireChipSettings, OnInit {
   }
 
   @HostBinding('tabindex')
-  // @ts-expect-error: Value is used
-  private readonly tabindex = 0;
+  protected readonly tabindex = 0;
 }
