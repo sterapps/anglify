@@ -94,8 +94,7 @@ export class BottomNavigationComponent implements AfterViewInit {
     });
   }
 
-  // @ts-expect-error: Value is used
-  @HostBinding('attr.role') private readonly role = 'tablist';
+  @HostBinding('attr.role') protected readonly role = 'tablist';
 
   @HostBinding('class')
   protected get classList() {

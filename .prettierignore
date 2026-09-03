@@ -12,3 +12,4 @@ apps/docs/src/assets/documentation.json
 /.nx/cache
 
 /.nx/workspace-data
+.nx/self-healing

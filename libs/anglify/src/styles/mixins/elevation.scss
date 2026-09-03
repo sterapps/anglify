@@ -10,10 +10,13 @@
     $z3: $z1;
   }
 
-  box-shadow:
-    map.get($shadow-key-umbra, $z1),
-    map.get($shadow-key-penumbra, $z2),
-    map.get($shadow-key-ambient, $z3) if($important, !important, null);
+  $shadow: map.get($shadow-key-umbra, $z1), map.get($shadow-key-penumbra, $z2), map.get($shadow-key-ambient, $z3);
+
+  @if $important {
+    box-shadow: $shadow !important;
+  } @else {
+    box-shadow: $shadow;
+  }
 }
 
 @mixin elevation-transition($duration: 280ms, $easing: cubic-bezier(0.4, 0, 0.2, 1)) {
