@@ -1,4 +1,6 @@
 /* eslint-disable n/no-extraneous-import */
 /* eslint-disable import/no-extraneous-dependencies */
-import 'jest-preset-angular/setup-jest';
+import { setupZoneTestEnv } from 'jest-preset-angular/setup-env/zone';
 import '@testing-library/jest-dom';
+
+setupZoneTestEnv();
