@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.52.0](https://github.com/sterapps/anglify/compare/v0.51.0...v0.52.0) (2026-10-28)
+
+
+### 🚀  Features
+
+* **core:** upgrade from Angular 20 to Angular 21 ([f92ff6f](https://github.com/sterapps/anglify/commit/f92ff6f610209c8ad57f95ebcfe3c643db6c5dc8))
+
 ## [0.51.0](https://github.com/sterapps/anglify/compare/v0.50.0...v0.51.0) (2026-08-31)
 
 
