@@ -108,8 +108,7 @@ export class StepperHeaderComponent {
     this.ripple = true;
   }
 
-  // @ts-expect-error: Value is used
-  @HostBinding('tabindex') private readonly tabIndex = 0;
+  @HostBinding('tabindex') protected readonly tabIndex = 0;
 
   @HostListener('click', ['$event'])
   @HostListener('keydown.enter', ['$event'])

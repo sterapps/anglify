@@ -97,21 +97,19 @@ export class TabComponent implements EntireTabSettings {
 
   private readonly routerLink$ = new BehaviorSubject<RouterLinkCommands>(this.settings.routerLink);
 
-  // @ts-expect-error: Value is used
-  @HostBinding('attr.role') private readonly role = 'tab';
+  @HostBinding('attr.role') protected readonly role = 'tab';
 
-  // @ts-expect-error: Value is used
-  @HostBinding('tabindex') private get tabindex() {
+  @HostBinding('tabindex') protected get tabindex() {
     return this.active ? 0 : -1;
   }
 
   @HostListener('keydown.arrowleft', ['$event'])
   @HostListener('keydown.arrowright', ['$event'])
-  // @ts-expect-error: Value is used
-  private onKeydown(event: KeyboardEvent) {
-    if (event.key === 'ArrowLeft') {
+  protected onKeydown(event: Event) {
+    const { key } = event as KeyboardEvent;
+    if (key === 'ArrowLeft') {
       this.onSelectPrevious.next();
-    } else if (event.key === 'ArrowRight') {
+    } else if (key === 'ArrowRight') {
       this.onSelectNext.next();
     }
   }
